@@ -10,6 +10,14 @@ target data, and random projections have distinct predeclared seeds. The
 largest- and smallest-endpoint siblings use the same seeds and differ only in
 the committed geometry index.
 
+Before a run can produce scientific evidence, a preregistered resource gate
+measures wall time through optimizer step 10. The run exits nonzero if mean
+throughput exceeds 12 seconds per update. This threshold was fixed from the
+completed sibling calibration (4.93 seconds per update) and the observed
+approximately ten-fold HF host-throughput split. The gate reads no loss,
+sample, metric, direction, or scientific result; a rejected host contributes
+no claim evidence and the identical commit may be relaunched.
+
 Training uses Adam at `1e-4`, gradient clipping at 1, exactly 200 epochs over
 10,000 rank-one samples with batch size 1,000, and therefore exactly 2,000
 optimizer updates. Generation uses the model’s default DDPM-equivalent path:

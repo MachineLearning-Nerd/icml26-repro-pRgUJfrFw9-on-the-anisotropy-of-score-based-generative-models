@@ -9,6 +9,13 @@
     "metric_and_cumulative_checks": 0.4,
     "total": [4.0, 6.0]
   },
+  "resource_gate": {
+    "measurement_step": 10,
+    "maximum_seconds_per_update": 12.0,
+    "calibration": "The completed smallest-SAD sibling took 49.33 seconds through step 10 (4.93 seconds/update); unsuitable HF hosts took about 50 seconds/update.",
+    "action_on_failure": "Exit nonzero before scientific evidence is generated and retry the identical committed node on a fresh cpu-upgrade host.",
+    "scientific_independence": "No loss, sample, metric, direction, or outcome value enters the gate."
+  },
   "gpu_allowed": false,
   "routing_reason": "Runtime is multi-hour, uses more than one CPU core, and therefore must not run locally."
 }

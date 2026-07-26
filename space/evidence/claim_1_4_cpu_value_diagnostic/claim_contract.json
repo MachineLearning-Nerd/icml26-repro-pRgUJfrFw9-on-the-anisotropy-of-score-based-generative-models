@@ -1,0 +1,16 @@
+{
+  "claims": [1, 4],
+  "stage": "CPU_RUNTIME_DIAGNOSTIC_ONLY",
+  "scientific_verdict": "NONE",
+  "question": "Does CPU subnormal handling explain the sustained roughly 10x slowdown observed for the largest-SAD endpoint?",
+  "conditions": [
+    "smallest SAD, default subnormal handling",
+    "largest SAD, default subnormal handling",
+    "largest SAD, torch.set_flush_denormal(True)",
+    "smallest SAD, torch.set_flush_denormal(True)"
+  ],
+  "fixed_work": "Two exact batch-1000 DSM Adam updates per condition after one separate kernel warmup; identical model, data, DSM, and optimizer seeds.",
+  "mechanism_support": "Largest-SAD flushing must provide at least 2x median step speedup while maximum relative loss difference versus default is at most 1e-5.",
+  "integrity_failure": "Non-finite values, wrong direction/setup, checker disagreement, or an unrejected negative control exits nonzero.",
+  "limitation": "This diagnostic cannot verify or falsify either paper claim."
+}

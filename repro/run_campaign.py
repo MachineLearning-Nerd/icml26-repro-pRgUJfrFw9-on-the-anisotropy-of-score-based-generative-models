@@ -62,7 +62,7 @@ def main():
         "claim_1_4_profile",
         "claim_1_4_geometry",
         "claim_1_4_geometry_adaptive",
-        "claim_1_4_generation_endpoint",
+        "claim_1_4_cpu_value_diagnostic",
     }
     checkers.extend(
         checker

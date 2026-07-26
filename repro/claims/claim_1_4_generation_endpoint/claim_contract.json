@@ -15,11 +15,17 @@
     "metric": "SW2 and MSW2",
     "random_projections": 16384
   },
+  "resource_gate": {
+    "step": 10,
+    "maximum_seconds_per_update": 12.0,
+    "purpose": "Reject an HF host whose measured CPU throughput would exceed the authorized run window.",
+    "non_circularity": "The gate uses elapsed wall time only. It is independent of loss, generated samples, SW2/MSW2, SAD endpoint, and every scientific outcome. A rejected host produces no claim evidence."
+  },
   "round_1_contract": "Run one predeclared paired seed independently at the largest and smallest stable SAD endpoints. This node alone cannot verify either claim.",
   "future_acceptance": {
     "endpoint_ordering": "Across at least five paired seeds, MSW2(smallest SAD) < MSW2(largest SAD) with a paired bootstrap 95% confidence interval for largest-minus-smallest strictly above zero.",
     "rank_association": "A later predeclared multi-direction round must show positive rank association between geometry eigenvalue and MSW2 with uncertainty.",
     "claim_1_scope": "Generation-preference ordering only; the eigenvector definition and geometry construction are checked separately."
   },
-  "integrity_failure": "The verifier exits nonzero on non-finite samples or losses, wrong step/sample/projection counts, a failed exact-setup audit, metric disagreement, checker failure, or a negative control that is not rejected."
+  "integrity_failure": "The verifier exits nonzero when the host exceeds the preregistered throughput limit, on non-finite samples or losses, wrong step/sample/projection counts, a failed exact-setup audit, metric disagreement, checker failure, or a negative control that is not rejected."
 }

@@ -12,3 +12,7 @@
 - Full generated tensors are not printed into logs. Their deterministic
   SHA-256 digest, distribution diagnostics, all projection-level distances,
   seeds, and regeneration command are retained.
+- HF `cpu-upgrade` hosts showed roughly ten-fold throughput variation despite
+  identical reported CPU allocation. A wall-time-only gate rejects hosts above
+  12 seconds per optimizer update at step 10. This affects resource
+  feasibility, not scientific selection; rejected hosts yield no claim result.

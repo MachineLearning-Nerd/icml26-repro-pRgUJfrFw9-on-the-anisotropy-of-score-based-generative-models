@@ -41,6 +41,8 @@ GEOMETRY_RAW = (
 )
 CONFIG = ROOT / "configs" / "1x16x16-iddpm.json"
 ARTIFACT.mkdir(parents=True, exist_ok=True)
+RESOURCE_GATE_STEP = 10
+MAX_SECONDS_PER_UPDATE = 12.0
 
 
 def emit(message: str) -> None:
@@ -138,6 +140,7 @@ def train(
     checkpoints = {1, 10, 100, 250, 500, 1_000, 1_500, 2_000}
     curve = []
     recent = []
+    resource_gate = None
     step = 0
     started = time.perf_counter()
     model.train()
@@ -164,8 +167,32 @@ def train(
                 }
                 curve.append(row)
                 emit("CLAIM_1_4_TRAIN_PROGRESS=" + json.dumps(row, sort_keys=True))
+                if step == RESOURCE_GATE_STEP:
+                    seconds_per_update = row["elapsed_seconds"] / step
+                    resource_gate = {
+                        "step": RESOURCE_GATE_STEP,
+                        "seconds_per_update": seconds_per_update,
+                        "maximum_seconds_per_update": MAX_SECONDS_PER_UPDATE,
+                        "passed": seconds_per_update <= MAX_SECONDS_PER_UPDATE,
+                        "selection_basis": (
+                            "host throughput only; independent of loss, samples, "
+                            "metric values, direction, and scientific outcome"
+                        ),
+                    }
+                    emit(
+                        "CLAIM_1_4_RESOURCE_GATE="
+                        + json.dumps(resource_gate, sort_keys=True)
+                    )
+                    if not resource_gate["passed"]:
+                        raise RuntimeError(
+                            "RESOURCE_HOST_TOO_SLOW: "
+                            f"{seconds_per_update:.6f} seconds/update exceeds "
+                            f"the preregistered {MAX_SECONDS_PER_UPDATE:.6f} limit"
+                        )
     if step != 2_000:
         raise RuntimeError(f"expected 2000 optimizer steps, observed {step}")
+    if resource_gate is None or not resource_gate["passed"]:
+        raise RuntimeError("resource throughput gate did not pass")
     coefficients = (data.reshape(10_000, -1) @ direction.reshape(-1)).numpy()
     empirical_trace = float(np.var(coefficients, ddof=0))
     return {
@@ -180,6 +207,7 @@ def train(
         "training_data_empirical_covariance_trace": empirical_trace,
         "training_data_expected_covariance_trace": 256.0,
         "model_state_sha256": model_sha256(model),
+        "resource_gate": resource_gate,
     }, data
 
 
