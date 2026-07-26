@@ -54,6 +54,7 @@ def main() -> None:
         "status_is_calibration": "CALIBRATION_ONLY"
         in raw["scientific_status"],
     }
+    checks = {name: bool(value) for name, value in checks.items()}
     passed = all(checks.values())
     output = {
         "implementation": (
