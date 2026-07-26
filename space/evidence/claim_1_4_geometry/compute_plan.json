@@ -1,0 +1,8 @@
+{
+  "estimated_required_cpu_cores": 32,
+  "estimated_runtime_minutes": "4-10",
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "gpu_allowed": false,
+  "reason": "Eight thousand fresh iDDPM initializations/forwards plus eigendecompositions are multithreaded and exceed the local five-minute/one-core rule."
+}

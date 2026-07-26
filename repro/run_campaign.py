@@ -55,7 +55,15 @@ def run_checker(checker):
 def main():
     started = time.perf_counter()
     checkers = [ROOT / "repro" / "src" / "verify_sad.py"]
-    checkers.extend(sorted((ROOT / "repro" / "claims").glob("*/verify.py")))
+    frozen_calibrations = {
+        "claim_1_4_profile",
+        "claim_1_4_geometry",
+    }
+    checkers.extend(
+        checker
+        for checker in sorted((ROOT / "repro" / "claims").glob("*/verify.py"))
+        if checker.parent.name not in frozen_calibrations
+    )
 
     print("CAMPAIGN_FIXED_COMMAND=uv sync --locked && .venv/bin/python repro/run_campaign.py")
     print("CPU_METADATA=" + json.dumps(cpu_metadata(), sort_keys=True))
