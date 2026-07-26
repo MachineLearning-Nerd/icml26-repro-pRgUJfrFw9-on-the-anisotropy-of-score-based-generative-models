@@ -1,0 +1,15 @@
+{
+    "shape": [1, 16, 16],
+    "learning_rate": 0.0001,
+    "grad_clip": 1.0,
+    "diffuser": {
+        "T": 1000,
+        "linear": true,
+        "model": {
+            "hidden_size": 48,
+            "depth": 8,
+            "num_heads": 4,
+            "mlp_ratio": 2
+        }
+    }
+}

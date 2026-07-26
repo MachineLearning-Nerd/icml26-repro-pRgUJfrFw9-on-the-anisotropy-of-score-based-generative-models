@@ -1,0 +1,10 @@
+{
+  "artifact_status": "Historical rejected baseline",
+  "judge_revision": "33d98421a79a7686497639f2d4d6163fc5acfa3f",
+  "purpose": "Reproduce the evaluator-visible toy checks as an immutable control; these checks do not verify the paper claims.",
+  "expected_judge_score": "5/12",
+  "acceptance": {
+    "all_historical_sanity_checks_exit_zero": true,
+    "scientific_claim_credit": false
+  }
+}

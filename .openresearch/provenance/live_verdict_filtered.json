@@ -1,0 +1,44 @@
+[
+  {
+    "space_id": "DineshAI/pRgUJfrFw9",
+    "orid": "pRgUJfrFw9",
+    "paper_title": "On the Anisotropy of Score-Based Generative Models",
+    "sha": "33d98421a79a7686497639f2d4d6163fc5acfa3f",
+    "judged_at": "2026-07-25T13:31:27+00:00",
+    "model": "zai-org/GLM-5.2",
+    "claims": [
+      {
+        "claim": "Score Anisotropy Directions (SADs) are defined as the ordered orthonormal eigenvectors of the average geometry matrix G_F = E[(F_θ(x_σ,σ))²], with ordering by eigenvalue magnitude conjectured to determine the network's generation preference (Definition 2).",
+        "verdict": "toy",
+        "evidence": "Computes G_F for a random d=6 linear score model F(x)=Ax and checks orthonormality (3.33e-16) and eigenvalue sorting. This confirms basic linear algebra properties on a tiny synthetic matrix, not the paper's actual setup or the conjectured generation-preference ordering."
+      },
+      {
+        "claim": "Theorem 1 shows that under denoising score matching with linear architectures and rank-one data, convergence rate decays with the eigenvalues of the conditioning matrix, and this anisotropic effect is amplified further under SGD (Theorem 1).",
+        "verdict": "toy",
+        "evidence": "Evaluates the formula exp(-lambda*T/sigma^2) for six eigenvalues and checks monotonic decrease. No actual denoising score matching training, no linear architecture simulation, and no SGD comparison—just a closed-form formula evaluation on paper."
+      },
+      {
+        "claim": "Theorem 2 characterizes the orthogonal transformation that minimizes versus maximizes alignment α with the SADs, showing minimization corresponds to reversing the eigenvalue ordering (Theorem 2).",
+        "verdict": "toy",
+        "evidence": "On d=6, verifies that reversed eigenvalue ordering yields alignment=0 vs identity=4.952. This is a small-scale numerical sanity check of the theorem's mathematical content, not a full proof verification or test at realistic scale."
+      },
+      {
+        "claim": "For an iDDPM U-Net, generation performance degrades monotonically as the eigenvalue associated with the aligned data direction increases, with the model performing best on data aligned with small-eigenvalue SAD eigenvectors (Figure 6).",
+        "verdict": "toy",
+        "evidence": "Explicitly labeled 'synthetic proxy': computes 1-exp(-lambda*T/sigma^2) for increasing eigenvalues and checks monotonicity. No iDDPM U-Net, no actual generation, no real data—just a formula evaluation standing in for the paper's empirical Figure 6."
+      },
+      {
+        "claim": "On MNIST, CelebA-HQ, and CIFAR-10, minimizing alignment α with the SADs substantially improves Sliced Wasserstein-2 distances relative to the default natural alignment, whereas maximizing alignment induces mode collapse (Figure 8, Figure 9).",
+        "verdict": "inconclusive",
+        "evidence": "The 'experiment' computes 1/alignment for linearly spaced alignment values (np.linspace), which is a mathematical tautology with no connection to MNIST, CelebA-HQ, CIFAR-10, Sliced Wasserstein-2 distances, or actual diffusion model generation. No real experiment was conducted."
+      },
+      {
+        "claim": "Closed-form average geometry expressions are derived per architecture: MLPs yield G_F = αI + β·11ᵀ, CNNs yield a block-diagonal Kronecker structure reflecting spatial organization, and Transformers yield at most T distinct eigenvalues where T is the number of tokens (Section on architecture-specific results).",
+        "verdict": "toy",
+        "evidence": "Constructs G_F matrices from the claimed closed-form formulas (mlp_geometry_matrix, cnn_geometry_matrix, transformer_geometry_matrix) and checks eigenvalue structure. This verifies internal consistency of the formulas but does not derive them from actual network architectures or test at realistic scale."
+      }
+    ],
+    "overall": "This logbook provides only small-scale (d=6) numpy sanity checks of mathematical properties and tautological formula evaluations as proxies for the paper's empirical claims. No actual diffusion models were trained, no real datasets were used, and no generation quality metrics were measured.",
+    "quality": "low"
+  }
+]
