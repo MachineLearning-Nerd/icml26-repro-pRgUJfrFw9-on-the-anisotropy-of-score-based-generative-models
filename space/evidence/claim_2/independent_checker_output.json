@@ -1,0 +1,27 @@
+{
+  "assumption_sensitivity": "The unrestricted operator contains off-diagonal modes that are unreachable from the theorem's zero-mean initialization. Including them erases the u_D mean-rate advantage.",
+  "formula_rho": [
+    1.5625,
+    1.5625,
+    1.5625,
+    1.5625,
+    2.5625
+  ],
+  "gradient_max_abs_error": 1.2695569040488408E-9,
+  "hessian_max_abs_error": 0.0,
+  "passed": true,
+  "recovered_rho": [
+    1.5625,
+    1.5625,
+    1.5625,
+    1.5625,
+    2.5625
+  ],
+  "unrestricted_full_operator_rho": [
+    1.5625,
+    1.5625,
+    1.5625,
+    1.5625,
+    1.5625
+  ]
+}

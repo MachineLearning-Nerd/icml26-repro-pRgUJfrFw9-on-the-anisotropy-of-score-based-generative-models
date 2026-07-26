@@ -1,0 +1,25 @@
+{
+  "claim_id": 3,
+  "source": {
+    "paper": "arXiv:2510.22899v1",
+    "anchor": "Alignment definition (main.tex lines 271-276), Theorem 2 (lines 280-283), proof Appendix C.3",
+    "statement": "Let G_F=U diag(lambda) U^T and M=V diag(nu) V^T be positive-semidefinite with both spectra in descending order. Over every orthogonal D by D transformation W, alpha(W)=tr(G_F W M W^T) is maximized by U V^T and minimized by U J V^T, where J reverses coordinate order."
+  },
+  "assumptions": [
+    "G_F and the data second moment M are real symmetric positive semidefinite",
+    "U and V are orthogonal eigenvector matrices",
+    "lambda and nu are in descending order",
+    "W ranges over the complete real orthogonal group",
+    "J is the coordinate-reversal permutation"
+  ],
+  "acceptance": {
+    "symbolic_exchange_certificate": "SymPy factors every two-assignment exchange into (a-b)(x-y), establishing the rearrangement ordering",
+    "doubly_stochastic_certificate": "the verifier checks symbolically and numerically that P_ij=R_ij^2 has row and column sums one for orthogonal R",
+    "complete_finite_domains": "all permutations are exhaustively checked for every dimension 2 through 9 on fixed strictly ordered spectra",
+    "independent_assignment_checker": "a separately implemented linear-assignment optimizer recovers the identity maximum and reverse minimum across fixed random PSD cases",
+    "orthogonal_sweep": "predeclared Haar-orthogonal matrices remain between the certified extrema",
+    "negative_control": "the deliberately wrong identity-is-a-minimizer rule is rejected on strict spectra",
+    "exit_behavior": "verifier exits nonzero if any required acceptance item fails"
+  },
+  "verdict_if_passed": "VERIFIED"
+}

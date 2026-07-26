@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "title": "Repro - Score Anisotropy Directions",
+  "title": "Score Anisotropy — Claim-by-Claim Reproduction",
   "emoji": "🎯",
   "space_id": "DineshAI/pRgUJfrFw9",
   "paper": null,
@@ -8,44 +8,26 @@
     "icml2026-repro",
     "paper-pRgUJfrFw9"
   ],
-  "updated_at": "2026-07-25T13:14:53+00:00",
+  "updated_at": "2026-07-26T00:00:00+00:00",
   "root": {
     "slug": "index",
-    "title": "Repro - Score Anisotropy Directions",
+    "title": "Current claim-by-claim verification",
     "file": "pages/index.md",
     "children": [
       {
-        "slug": "overview",
-        "title": "Overview",
-        "file": "pages/overview/page.md",
+        "slug": "current-claim-2",
+        "title": "Current Claim 2 — VERIFIED",
+        "file": "pages/current/claim-2/page.md",
         "children": []
       },
       {
-        "slug": "claims",
-        "title": "Claims",
-        "file": "pages/claims/page.md",
-        "children": []
-      },
-      {
-        "slug": "evidence",
-        "title": "Evidence",
-        "file": "pages/evidence/page.md",
-        "children": []
-      },
-      {
-        "slug": "verification-run",
-        "title": "Verification run",
-        "file": "pages/verification-run/page.md",
-        "children": []
-      },
-      {
-        "slug": "conclusion",
-        "title": "Conclusion",
-        "file": "pages/conclusion/page.md",
+        "slug": "historical-rejected-baseline",
+        "title": "Historical rejected baseline",
+        "file": "pages/historical-rejected-baseline/page.md",
         "children": []
       }
     ]
   },
-  "agent_view_tokens": 1579,
-  "revision": "1784985293260404132"
+  "agent_view_tokens": 5200,
+  "revision": "claim2-candidate"
 }

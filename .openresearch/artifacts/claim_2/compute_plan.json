@@ -1,0 +1,8 @@
+{
+  "estimated_required_cpu_cores": 2,
+  "estimated_runtime_minutes": "1-4",
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "gpu_allowed": false,
+  "reason": "The checker is CPU-only, but the cumulative locked environment sync and vectorized Monte Carlo have uncertain runtime and may use BLAS threads."
+}

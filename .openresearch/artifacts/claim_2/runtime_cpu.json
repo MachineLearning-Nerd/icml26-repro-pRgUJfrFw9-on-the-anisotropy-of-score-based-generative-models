@@ -1,0 +1,15 @@
+{
+  "run_id": "f696ab27-32f4-49e2-82b6-b7d9d71b144a",
+  "git_sha": "6864b70ce711c738f306848dea56ffefbff83898",
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "estimated_required_cpu_cores": 2,
+  "estimated_runtime_minutes": "1-4",
+  "actual_logical_cpus": 64,
+  "actual_physical_cpus": 32,
+  "actual_affinity_cpus": 64,
+  "full_job_runtime_seconds": 32,
+  "claim_checker_runtime_seconds": 5.512556268949993,
+  "cumulative_checker_runtime_seconds": 6.046443396015093,
+  "gpu_used": false
+}

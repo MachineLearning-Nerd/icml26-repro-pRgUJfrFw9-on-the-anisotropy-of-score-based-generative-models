@@ -1,0 +1,26 @@
+[project]
+name = "score-anisotropy-reproduction"
+version = "0.1.0"
+description = "CPU-only reproduction campaign for arXiv:2510.22899"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "marimo==0.14.10",
+  "matplotlib==3.10.3",
+  "numpy==2.2.6",
+  "pillow==11.2.1",
+  "psutil==7.0.0",
+  "scipy==1.15.3",
+  "sympy==1.14.0",
+  "timm==1.0.19",
+  "torch==2.7.1",
+  "torchvision==0.22.1",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
