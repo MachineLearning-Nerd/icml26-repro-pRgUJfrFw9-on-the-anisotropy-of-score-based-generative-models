@@ -170,7 +170,7 @@ def covariance_trace_blocks():
     correlation = float(np.corrcoef(lambdas, estimates)[0, 1])
     max_relative_error = max(row["relative_error"] for row in rows)
     return {
-        "passed": correlation > 0.999 and max_relative_error < 0.06,
+        "passed": bool(correlation > 0.999 and max_relative_error < 0.06),
         "pearson_correlation": correlation,
         "max_relative_error": max_relative_error,
         "rows": rows,
