@@ -1,0 +1,19 @@
+{
+  "claims": [1, 4],
+  "scientific_status": "CPU_RESOURCE_CALIBRATION_ONLY; CLAIMS_REMAIN_BLOCKED",
+  "question": "Under one common four-thread policy, how long does one exact batch of 1,000 samples take through all 1,000 author DDPM reverse steps?",
+  "policy": {
+    "torch_intraop_threads": 4,
+    "applies_identically_to_future_largest_and_smallest_endpoints": true,
+    "basis": "Fastest measured within-setting deterministic schedule; two repetitions had identical final state hashes and losses differed from 32 threads by at most 6.791127202158818e-8 relatively."
+  },
+  "exact_path": {
+    "architecture": "author D=256 iDDPM U-Net",
+    "batch_size": 1000,
+    "diffusion_steps": 1000,
+    "steps_argument": null,
+    "eta": 1.0
+  },
+  "projection": "Multiply the observed one-batch sampling time by ten for 10,000 samples, and combine it with 2,000 times the independently measured four-thread optimizer-update median.",
+  "integrity_failure": "Exit nonzero for non-finite output, wrong output shape/step count/thread count, checker disagreement, GPU use, or a negative control that is not rejected."
+}

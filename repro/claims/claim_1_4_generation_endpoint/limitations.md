@@ -16,3 +16,6 @@
   identical reported CPU allocation. A wall-time-only gate rejects hosts above
   12 seconds per optimizer update at step 10. This affects resource
   feasibility, not scientific selection; rejected hosts yield no claim result.
+- The paired endpoints use four PyTorch intra-op threads on hosts exposing 64
+  logical and 32 physical CPUs. This changes only CPU reduction scheduling,
+  which the paper does not specify, and is applied identically to both siblings.

@@ -1,21 +1,23 @@
 {
   "backend": "hf",
   "flavor": "cpu-upgrade",
-  "estimated_physical_cores": 32,
-  "estimated_logical_cpus": 64,
+  "estimated_required_cores": 4,
+  "expected_allocated_physical_cores": 32,
+  "expected_allocated_logical_cpus": 64,
+  "torch_intraop_threads": 4,
   "estimated_runtime_hours": {
-    "training": 2.1,
-    "sampling": 2.6,
-    "metric_and_cumulative_checks": 0.4,
-    "total": [4.0, 6.0]
+    "training": 1.5287,
+    "sampling": 3.3897,
+    "metric_and_cumulative_checks": [0.1, 0.5],
+    "total": [5.0, 5.5]
   },
   "resource_gate": {
     "measurement_step": 10,
     "maximum_seconds_per_update": 12.0,
-    "calibration": "The completed smallest-SAD sibling took 49.33 seconds through step 10 (4.93 seconds/update); unsuitable HF hosts took about 50 seconds/update.",
+    "calibration": "The accepted four-thread exact-path profile measured 2.751637957 seconds/update and 1220.295648 seconds for one batch of 1,000 samples through all 1,000 reverse steps. Ten sampling batches plus 2,000 updates project to 4.918397886 hours before metrics and cumulative checks.",
     "action_on_failure": "Exit nonzero before scientific evidence is generated and retry the identical committed node on a fresh cpu-upgrade host.",
     "scientific_independence": "No loss, sample, metric, direction, or outcome value enters the gate."
   },
   "gpu_allowed": false,
-  "routing_reason": "Runtime is multi-hour, uses more than one CPU core, and therefore must not run locally."
+  "routing_reason": "The verifier explicitly uses four intra-op CPU threads and has a multi-hour runtime, so every endpoint must use Hugging Face cpu-upgrade rather than local CPU."
 }

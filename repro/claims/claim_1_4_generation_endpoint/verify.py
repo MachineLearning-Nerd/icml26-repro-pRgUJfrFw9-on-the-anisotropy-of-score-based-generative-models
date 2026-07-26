@@ -43,6 +43,7 @@ CONFIG = ROOT / "configs" / "1x16x16-iddpm.json"
 ARTIFACT.mkdir(parents=True, exist_ok=True)
 RESOURCE_GATE_STEP = 10
 MAX_SECONDS_PER_UPDATE = 12.0
+TORCH_INTRAOP_THREADS = 4
 
 
 def emit(message: str) -> None:
@@ -329,6 +330,8 @@ def negative_control() -> dict:
 
 def main() -> None:
     total_started = time.perf_counter()
+    torch.set_num_threads(TORCH_INTRAOP_THREADS)
+    torch.set_flush_denormal(False)
     design = json.loads((HERE / "design.json").read_text())
     config = json.loads(CONFIG.read_text())
     direction, direction_record = load_direction(design)
@@ -354,6 +357,10 @@ def main() -> None:
         "model_parameters": parameter_count,
         "training_samples": 10_000,
         "target_distribution": "N(0, 256 v v^T)",
+        "torch_intraop_threads": TORCH_INTRAOP_THREADS,
+        "thread_policy": (
+            "identical four-thread intra-op setting for both endpoint siblings"
+        ),
         "fixed_command": "uv sync --locked && .venv/bin/python repro/run_campaign.py",
     }
     exact_setup_passed = (
@@ -365,6 +372,7 @@ def main() -> None:
         and metric_record["projection_count"] == 16_384
         and math.isfinite(metric_record["sw2"])
         and math.isfinite(metric_record["msw2"])
+        and compute["torch_intraop_threads"] == TORCH_INTRAOP_THREADS
         and control["rejected"]
     )
     result = {

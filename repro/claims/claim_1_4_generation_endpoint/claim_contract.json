@@ -13,7 +13,9 @@
     "diffusion_steps": 1000,
     "generated_samples": 10000,
     "metric": "SW2 and MSW2",
-    "random_projections": 16384
+    "random_projections": 16384,
+    "torch_intraop_threads": 4,
+    "thread_policy": "Both endpoint siblings must use the same four-thread intra-op setting."
   },
   "resource_gate": {
     "step": 10,

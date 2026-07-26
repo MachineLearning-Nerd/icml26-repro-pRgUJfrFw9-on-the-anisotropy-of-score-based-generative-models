@@ -37,6 +37,8 @@ def main() -> None:
         "dataset_samples": raw["setup"]["training_samples"] == 10_000,
         "negative_control_rejected": raw["negative_control"]["rejected"] is True,
         "no_gpu": raw["compute"]["gpu_used"] is False,
+        "common_four_thread_policy": raw["compute"]["torch_intraop_threads"] == 4
+        and raw["setup"]["torch_intraop_threads"] == 4,
     }
     passed = all(checks.values())
     output = {
