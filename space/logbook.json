@@ -21,6 +21,12 @@
         "children": []
       },
       {
+        "slug": "current-claim-3",
+        "title": "Current Claim 3 — VERIFIED",
+        "file": "pages/current/claim-3/page.md",
+        "children": []
+      },
+      {
         "slug": "historical-rejected-baseline",
         "title": "Historical rejected baseline",
         "file": "pages/historical-rejected-baseline/page.md",
@@ -28,6 +34,6 @@
       }
     ]
   },
-  "agent_view_tokens": 5200,
-  "revision": "claim2-candidate"
+  "agent_view_tokens": 7600,
+  "revision": "claim3-candidate"
 }

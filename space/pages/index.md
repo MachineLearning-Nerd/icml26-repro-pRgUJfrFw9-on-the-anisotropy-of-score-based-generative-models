@@ -10,7 +10,7 @@ Only claims marked VERIFIED or FALSIFIED receive a full-credit forecast.
 | --- | --- | --- |
 | 1 | Campaign in progress | BLOCKED |
 | [2 — exact linear DSM theorem](#/current-claim-2) | Proof reconstruction plus actual population/SGD training | VERIFIED |
-| 3 | Campaign in progress | BLOCKED |
+| [3 — exact alignment extrema](#/current-claim-3) | Symbolic/combinatorial proof reconstruction plus independent optimization | VERIFIED |
 | 4 | Campaign in progress | BLOCKED |
 | 5 | Campaign in progress | BLOCKED |
 | 6 | Campaign in progress | BLOCKED |
@@ -20,6 +20,7 @@ Only claims marked VERIFIED or FALSIFIED receive a full-credit forecast.
 | Page |
 | --- |
 | [Current Claim 2](#/current-claim-2) |
+| [Current Claim 3](#/current-claim-3) |
 | [Historical rejected baseline](#/historical-rejected-baseline) |
 
 The exact judged 5/12 Space revision is retained unchanged under its protected

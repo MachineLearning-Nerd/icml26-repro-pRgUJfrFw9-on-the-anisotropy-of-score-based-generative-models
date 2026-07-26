@@ -1,0 +1,8 @@
+{
+  "control_claim": "identity ordering is a minimizer for strict descending spectra",
+  "expected_to_fail": true,
+  "gap": 54.75,
+  "identity_value": 86.75,
+  "rejected": true,
+  "reversal_value": 32.0
+}

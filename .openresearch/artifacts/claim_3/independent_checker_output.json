@@ -1,0 +1,190 @@
+{
+  "implementation": "scipy.optimize.linear_sum_assignment on recovered PSD spectra",
+  "max_maximum_abs_error": 5.684341886080802E-14,
+  "max_minimum_abs_error": 2.1316282072803006E-14,
+  "passed": true,
+  "rows": [
+    {
+      "assignment_maximum": 68.71824715959798,
+      "assignment_minimum": 50.040196195212744,
+      "dimension": 8,
+      "direct_maximum": 68.71824715959798,
+      "direct_minimum": 50.04019619521276,
+      "maximum_abs_error": 0.0,
+      "minimum_abs_error": 1.4210854715202004E-14
+    },
+    {
+      "assignment_maximum": 69.24453170304332,
+      "assignment_minimum": 56.34504600403421,
+      "dimension": 9,
+      "direct_maximum": 69.24453170304336,
+      "direct_minimum": 56.34504600403423,
+      "maximum_abs_error": 4.263256414560601E-14,
+      "minimum_abs_error": 2.1316282072803006E-14
+    },
+    {
+      "assignment_maximum": 80.34029172730233,
+      "assignment_minimum": 48.59053013561886,
+      "dimension": 10,
+      "direct_maximum": 80.34029172730231,
+      "direct_minimum": 48.59053013561884,
+      "maximum_abs_error": 1.4210854715202004E-14,
+      "minimum_abs_error": 2.1316282072803006E-14
+    },
+    {
+      "assignment_maximum": 76.88514391517292,
+      "assignment_minimum": 53.00152365556215,
+      "dimension": 11,
+      "direct_maximum": 76.88514391517295,
+      "direct_minimum": 53.00152365556215,
+      "maximum_abs_error": 2.842170943040401E-14,
+      "minimum_abs_error": 0.0
+    },
+    {
+      "assignment_maximum": 92.13820277492896,
+      "assignment_minimum": 49.95899571522209,
+      "dimension": 12,
+      "direct_maximum": 92.1382027749289,
+      "direct_minimum": 49.95899571522207,
+      "maximum_abs_error": 5.684341886080802E-14,
+      "minimum_abs_error": 1.4210854715202004E-14
+    }
+  ],
+  "selected_permutations": [
+    {
+      "dimension": 8,
+      "max_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "min_columns": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "dimension": 9,
+      "max_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "min_columns": [
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "dimension": 10,
+      "max_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "min_columns": [
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "dimension": 11,
+      "max_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "min_columns": [
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "dimension": 12,
+      "max_columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "min_columns": [
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    }
+  ]
+}

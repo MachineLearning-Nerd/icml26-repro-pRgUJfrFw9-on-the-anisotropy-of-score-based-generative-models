@@ -1,0 +1,8 @@
+{
+  "estimated_required_cpu_cores": 2,
+  "estimated_runtime_minutes": "1-3",
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "gpu_allowed": false,
+  "reason": "The cumulative campaign reruns Claim 2's vectorized Monte Carlo, while Claim 3 adds exhaustive enumeration and numerical eigendecompositions; aggregate runtime and BLAS core use are uncertain locally."
+}
