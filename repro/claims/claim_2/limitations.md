@@ -7,3 +7,7 @@
 - “Covariance proportional to lambda_i” is operationalized as covariance trace
   scale. The full covariance matrices also rotate with `u_i`, so literal
   elementwise proportionality across different directions would be false.
+- The `u_D` mean-rate advantage relies on the theorem's zero-mean
+  initialization: the unrestricted error operator contains slower
+  off-diagonal modes, but those modes have zero coefficient in the stated mean
+  error and are never entered by the population update.

@@ -55,13 +55,22 @@ def run():
     gradient_max_abs_error = float(np.max(np.abs(analytic - finite)))
 
     recovered_rho = []
+    unrestricted_rho = []
     formula_rho = []
     for index in range(5):
         direction = np.eye(5)[index]
         left = phi @ phi.T
         right = np.outer(direction, direction) + sigma**2 * np.eye(5)
         operator = np.kron(right.T, left)
-        recovered = float(np.linalg.eigvalsh(operator).min())
+        unrestricted = float(np.linalg.eigvalsh(operator).min())
+
+        # The theorem concerns the mean error under E[Theta_0]=0. Its initial
+        # mean error is diagonal in the shared eigenbasis and the population
+        # update preserves that diagonal subspace. Project the independently
+        # built full operator onto this reachable invariant subspace.
+        diagonal_indices = [row * 5 + row for row in range(5)]
+        projected = operator[np.ix_(diagonal_indices, diagonal_indices)]
+        recovered = float(np.linalg.eigvalsh(projected).min())
         expected = float(
             min(
                 (sigma**2 + 1.0) * spectrum[index],
@@ -69,6 +78,7 @@ def run():
             )
         )
         recovered_rho.append(recovered)
+        unrestricted_rho.append(unrestricted)
         formula_rho.append(expected)
 
     hessian_max_abs_error = float(
@@ -80,6 +90,8 @@ def run():
         "gradient_max_abs_error": gradient_max_abs_error,
         "hessian_max_abs_error": hessian_max_abs_error,
         "recovered_rho": recovered_rho,
+        "unrestricted_full_operator_rho": unrestricted_rho,
+        "assumption_sensitivity": "The unrestricted operator contains off-diagonal modes that are unreachable from the theorem's zero-mean initialization. Including them erases the u_D mean-rate advantage.",
         "formula_rho": formula_rho,
     }
 
