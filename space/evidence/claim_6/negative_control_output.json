@@ -1,0 +1,15 @@
+{
+  "expected_to_fail": true,
+  "per_control_rejected": {
+    "cnn_non_iid": true,
+    "mlp_non_iid": true,
+    "transformer_nonzero_mean": true
+  },
+  "rejected": true,
+  "residuals": {
+    "cnn_non_iid": 0.20878770000538335,
+    "mlp_non_iid": 0.10146382325658827,
+    "transformer_nonzero_mean_projection": 0.8018929141743302,
+    "transformer_nonzero_mean_theory": 0.9253981874214255
+  }
+}

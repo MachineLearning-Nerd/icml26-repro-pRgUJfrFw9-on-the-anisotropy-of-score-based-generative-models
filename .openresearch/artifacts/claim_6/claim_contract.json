@@ -1,0 +1,39 @@
+{
+  "claim_id": 6,
+  "source": {
+    "paper": "arXiv:2510.22899v1",
+    "anchors": [
+      "Proposition 1 and Appendix C.4: MLP final layer",
+      "Proposition 2 and Appendix C.5: CNN final layer",
+      "Proposition 3 and Appendix C.6: transformer-style final layer"
+    ],
+    "statement": "For the specified output-layer families and parameter assumptions, the average geometry is alpha I + beta 11^T for an elementwise MLP output, I_Cout tensor A + 11^T_Cout tensor B for a convolutional output, and Q(A tensor I_Lout)Q^T for a zero-mean shared transformer output with orthonormal Q; the last structure has at most T distinct eigenvalues."
+  },
+  "assumptions": {
+    "mlp": [
+      "z=phi(W h+b), elementwise phi",
+      "h is arbitrary and independent of output-layer parameters",
+      "W and b groups are independent; output-coordinate parameters are iid"
+    ],
+    "cnn": [
+      "z=phi(W*h+b), elementwise phi",
+      "convolution filters and biases are independent groups and iid across output channels",
+      "h is arbitrary and independent of output-layer parameters"
+    ],
+    "transformer": [
+      "z=Q(W h+b), with a single shared W operating on T tokens",
+      "Q is fixed and orthonormal",
+      "W and b are independent, zero-mean, and iid within each group",
+      "bias entries are token/output-coordinate independent"
+    ]
+  },
+  "acceptance": {
+    "proof_reconstruction": "symbolic conditional-moment identities recover all three structures and the transformer eigenvalue multiplicity",
+    "actual_networks": "direct Monte Carlo outer products of executable MLP, convolution, and shared-token layers agree with the derived projections within predeclared relative Frobenius tolerances",
+    "independent_checker": "complete finite Rademacher parameter domains independently reproduce all three geometries",
+    "uncertainty": "block-level structural residuals and standard errors are reported",
+    "negative_controls": "non-iid MLP/CNN output parameters and nonzero-mean transformer weights must violate their corresponding projected structures",
+    "exit_behavior": "verifier exits nonzero unless all certificates, actual networks, independent checks, and control rejections pass"
+  },
+  "verdict_if_passed": "VERIFIED"
+}

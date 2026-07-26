@@ -1,0 +1,8 @@
+{
+  "estimated_required_cpu_cores": 8,
+  "estimated_runtime_minutes": "2-5",
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "gpu_allowed": false,
+  "reason": "The cumulative suite plus batched PyTorch MLP/convolution/transformer Monte Carlo uses multithreaded tensor algebra and has uncertain runtime; local execution is prohibited by the campaign compute rule."
+}

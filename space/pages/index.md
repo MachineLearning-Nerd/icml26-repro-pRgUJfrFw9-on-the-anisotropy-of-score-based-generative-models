@@ -13,7 +13,7 @@ Only claims marked VERIFIED or FALSIFIED receive a full-credit forecast.
 | [3 — exact alignment extrema](#/current-claim-3) | Symbolic/combinatorial proof reconstruction plus independent optimization | VERIFIED |
 | 4 | Campaign in progress | BLOCKED |
 | 5 | Campaign in progress | BLOCKED |
-| 6 | Campaign in progress | BLOCKED |
+| [6 — architecture geometries](#/current-claim-6) | Conditional-moment proof plus actual executable networks | VERIFIED |
 
 ## Navigation
 
@@ -21,6 +21,7 @@ Only claims marked VERIFIED or FALSIFIED receive a full-credit forecast.
 | --- |
 | [Current Claim 2](#/current-claim-2) |
 | [Current Claim 3](#/current-claim-3) |
+| [Current Claim 6](#/current-claim-6) |
 | [Historical rejected baseline](#/historical-rejected-baseline) |
 
 The exact judged 5/12 Space revision is retained unchanged under its protected

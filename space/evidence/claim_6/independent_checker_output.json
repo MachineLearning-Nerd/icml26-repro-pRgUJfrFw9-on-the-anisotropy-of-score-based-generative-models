@@ -1,0 +1,21 @@
+{
+  "cnn": {
+    "complete_parameter_states": 8,
+    "max_error": 0.0,
+    "passed": true
+  },
+  "implementation": "complete finite Rademacher parameter domains; no primary-verifier calls",
+  "mlp": {
+    "complete_parameter_states": 8,
+    "max_error": 0.0,
+    "passed": true
+  },
+  "passed": true,
+  "transformer": {
+    "complete_weight_states": 16,
+    "distinct_eigenvalues": 3,
+    "max_error": 0.0,
+    "passed": true,
+    "token_count": 3
+  }
+}
