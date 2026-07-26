@@ -1,0 +1,11 @@
+{
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "estimated_physical_cores_allocated": 32,
+  "estimated_logical_cpus_allocated": 64,
+  "torch_intraop_threads": 4,
+  "estimated_runtime_minutes": [10, 30],
+  "timeout": "1h",
+  "gpu_allowed": false,
+  "routing_reason": "One full 1,000-step batch has uncertain multi-minute runtime and must run on HF cpu-upgrade."
+}

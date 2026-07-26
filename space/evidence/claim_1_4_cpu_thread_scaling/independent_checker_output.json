@@ -1,0 +1,56 @@
+{
+  "checks": {
+    "diagnostics_match": true,
+    "direction_unit": true,
+    "finite_losses": true,
+    "finite_positive_timings": true,
+    "negative_control_rejected": true,
+    "no_gpu": true,
+    "safe_set_matches": true,
+    "scientific_status_is_diagnostic": true,
+    "selected_matches": true,
+    "six_thread_counts": true,
+    "three_steps_each": true,
+    "two_repetitions_each": true
+  },
+  "endpoint_resource_gate_would_pass": false,
+  "implementation": "independent NumPy recomputation from raw per-step records; no primary-verifier imports",
+  "passed": true,
+  "recomputed": {
+    "1": {
+      "all_state_hashes_equal_32": false,
+      "max_loss_relative_error_vs_32": 6.791127202158818E-8,
+      "median_seconds_per_update": 5.603696324717021
+    },
+    "16": {
+      "all_state_hashes_equal_32": false,
+      "max_loss_relative_error_vs_32": 6.791127202158818E-8,
+      "median_seconds_per_update": 20.307060077757342
+    },
+    "2": {
+      "all_state_hashes_equal_32": false,
+      "max_loss_relative_error_vs_32": 6.791127202158818E-8,
+      "median_seconds_per_update": 3.5126946137461346
+    },
+    "32": {
+      "all_state_hashes_equal_32": true,
+      "max_loss_relative_error_vs_32": 0.0,
+      "median_seconds_per_update": 47.89006951349438
+    },
+    "4": {
+      "all_state_hashes_equal_32": false,
+      "max_loss_relative_error_vs_32": 6.791127202158818E-8,
+      "median_seconds_per_update": 2.75163795723347
+    },
+    "8": {
+      "all_state_hashes_equal_32": false,
+      "max_loss_relative_error_vs_32": 6.791127202158818E-8,
+      "median_seconds_per_update": 3.7800330932659563
+    }
+  },
+  "safe_thread_counts": [
+    32
+  ],
+  "selected_seconds_per_update": 47.89006951349438,
+  "selected_thread_count": 32
+}

@@ -1,0 +1,18 @@
+{
+  "claims": [1, 4],
+  "scientific_status": "CPU_RESOURCE_DIAGNOSTIC_ONLY; CLAIMS_REMAIN_BLOCKED",
+  "question": "Can a numerically equivalent PyTorch intra-op thread count reduce exact iDDPM DSM update time enough to clear the predeclared 12-second endpoint resource gate?",
+  "thread_counts": [1, 2, 4, 8, 16, 32],
+  "orders": [[32, 1, 16, 2, 8, 4], [4, 8, 2, 16, 1, 32]],
+  "trial": {
+    "architecture": "author D=256 iDDPM U-Net",
+    "data": "one fixed batch of 1000 samples from N(0, 256 v_max v_max^T)",
+    "optimizer": "Adam at 1e-4 with gradient clipping at 1",
+    "steps": 3,
+    "warmup_steps_excluded_from_timing": 1,
+    "timed_steps": 2
+  },
+  "safe_condition": "Both repetitions must have exactly the same final model SHA-256 as the 32-thread reference and maximum loss relative error <= 1e-7.",
+  "selection": "Among safe thread counts only, select the smallest median time over the four timed updates. Timing never affects a claim verdict or metric.",
+  "integrity_failure": "Exit nonzero for missing trials, non-finite loss/timing, checker disagreement, non-unit SAD direction, GPU use, or a negative control that is not rejected."
+}
