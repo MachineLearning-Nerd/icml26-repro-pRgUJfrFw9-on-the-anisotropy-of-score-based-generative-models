@@ -1,0 +1,14 @@
+{
+  "claim_ids": [1, 4],
+  "status": "CALIBRATION_ONLY",
+  "purpose": "Measure author-exact iDDPM CPU costs before selecting any geometry sample count, training horizon, evaluation sample count, or diffusion-step deviation.",
+  "fixed_architecture": "configs/1x16x16-iddpm.json: D=256, base channels 32, channel multipliers 1/1, depth 1, 1000 linear diffusion steps",
+  "measurements": [
+    "fresh-network default-probe geometry forward cost",
+    "one exact batch-1000 DSM optimizer-step cost",
+    "one exact batch-1000 epsilon-forward cost used inside the 1000-step sampler",
+    "a fixed SW2 projection/sort pilot for cost scaling",
+    "resident memory, thread count, and extrapolated paper-scale costs"
+  ],
+  "scientific_verdict": "No Claim 1 or Claim 4 verdict is permitted from this profile."
+}

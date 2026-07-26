@@ -1,0 +1,27 @@
+{
+  "claim_ids": [1, 4],
+  "status": "GEOMETRY_CALIBRATION_ONLY",
+  "source": {
+    "definition": "G_F=E[F_theta(x_sigma,sigma)F_theta(x_sigma,sigma)^T]",
+    "probe": "x_sigma=0 and sigma/noise index uniform over the 1000 diffusion levels",
+    "parameters": "independent default initializations of the paper's iDDPM U-Net",
+    "dimension": 256
+  },
+  "estimator": {
+    "networks": 8000,
+    "stratification": "each consecutive block of 1000 independent networks assigns every diffusion timestep exactly once",
+    "checkpoints": [1000, 2000, 4000, 8000],
+    "split_halves": "four alternating 1000-network blocks per half",
+    "selected_descending_indices": [0, 31, 63, 95, 127, 159, 191, 223, 255]
+  },
+  "acceptance": {
+    "definition": "accumulate vector outer products, never scalar squares",
+    "matrix": "symmetric PSD within numerical tolerance",
+    "eigendecomposition": "orthonormality and eigen residual below 1e-10",
+    "independent_checker": "Torch and NumPy eigenspectra agree within 1e-8 relative error",
+    "negative_control": "fixed random directions are rejected as eigenvectors",
+    "uncertainty": "checkpoint overlaps, split-half vector/subspace overlaps, and block-bootstrap eigenvalue intervals are reported",
+    "exit_behavior": "nonzero on any structural or control failure"
+  },
+  "scientific_verdict": "No generation-preference verdict is allowed until actual iDDPM training and sampling use the committed directions."
+}

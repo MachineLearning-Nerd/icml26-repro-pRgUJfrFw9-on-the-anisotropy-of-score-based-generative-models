@@ -1,0 +1,8 @@
+{
+  "estimated_required_cpu_cores": 32,
+  "estimated_runtime_minutes": "3-10",
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "gpu_allowed": false,
+  "reason": "The exact iDDPM batch-1000 forward/backward path is multithreaded and its CPU time and memory are unknown. Campaign rules prohibit profiling it locally."
+}
