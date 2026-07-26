@@ -1,0 +1,9 @@
+{
+  "run_stage": "frozen historical baseline",
+  "estimated_required_cpu_cores": 2,
+  "estimated_runtime_minutes": "3-12 (dependency cache state uncertain)",
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "gpu_allowed": false,
+  "rationale": "The numerical checks are single-core and sub-minute, but first-time locked environment synchronization has uncertain runtime and may use more than one core. Policy therefore requires Hugging Face cpu-upgrade."
+}
