@@ -1,0 +1,27 @@
+{
+  "claim_id": 2,
+  "source": {
+    "paper": "arXiv:2510.22899v1",
+    "anchor": "Theorem 1 (main.tex lines 182-185), proof Appendix C.2",
+    "statement": "For rank-one Gaussian DSM with fixed sigma>0, unit v=u_i, linear Omega=Phi Theta, zero-mean initialization, a sufficiently small learning rate, and lambda_(D-1)>lambda_D>0, the mean error has rate O((1-2 eta rho_i)^t), with the same rho_i for i<D and a strictly larger rho_D. Near optimality, the trace scale of the SGD-step covariance is proportional to lambda_i."
+  },
+  "assumptions": [
+    "x is distributed N(0, vv^T)",
+    "sigma is fixed and positive",
+    "v is a unit eigenvector of Phi Phi^T",
+    "Phi is fixed and Phi Phi^T has a positive smallest eigenvalue",
+    "lambda_(D-1) > lambda_D",
+    "Theta has zero-mean initialization",
+    "eta is small enough that all GD contraction factors are nonnegative"
+  ],
+  "acceptance": {
+    "symbolic_rate_certificate": "all exact algebraic identities and strict inequalities pass",
+    "exact_recurrence": "closed form equals iterated population GD for every direction, t=0..12, in two predeclared rational spectra",
+    "independent_checker": "full Kronecker-Hessian eigenanalysis agrees with the rho formula and finite differences agree with the gradient",
+    "sgd_covariance": "Monte Carlo covariance-trace estimates have Pearson r > 0.999 with lambda and maximum relative error < 0.06",
+    "training_simulation": "population GD shows the predicted asymptotic contraction ordering; batch-one DSM SGD is executed and reported",
+    "negative_control": "the deliberately wrong rho_i=sigma^2 lambda_i rule is rejected",
+    "exit_behavior": "verifier exits nonzero if any acceptance item fails"
+  },
+  "verdict_if_passed": "VERIFIED"
+}
