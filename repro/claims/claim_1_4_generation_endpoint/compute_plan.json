@@ -1,0 +1,14 @@
+{
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "estimated_physical_cores": 32,
+  "estimated_logical_cpus": 64,
+  "estimated_runtime_hours": {
+    "training": 2.1,
+    "sampling": 2.6,
+    "metric_and_cumulative_checks": 0.4,
+    "total": [4.0, 6.0]
+  },
+  "gpu_allowed": false,
+  "routing_reason": "Runtime is multi-hour, uses more than one CPU core, and therefore must not run locally."
+}

@@ -1,0 +1,25 @@
+{
+  "claims": [1, 4],
+  "stage": "paired_endpoint_seed_0",
+  "scientific_status": "PARTIAL_UNTIL_PAIRED_ENDPOINTS_AND_MULTIPLE_SEEDS_ARE_AGGREGATED",
+  "exact_setup": {
+    "architecture": "author iDDPM U-Net from configs/1x16x16-iddpm.json",
+    "dimension": 256,
+    "data": "N(0, 256 v v^T)",
+    "training_samples": 10000,
+    "batch_size": 1000,
+    "epochs": 200,
+    "optimizer_steps": 2000,
+    "diffusion_steps": 1000,
+    "generated_samples": 10000,
+    "metric": "SW2 and MSW2",
+    "random_projections": 16384
+  },
+  "round_1_contract": "Run one predeclared paired seed independently at the largest and smallest stable SAD endpoints. This node alone cannot verify either claim.",
+  "future_acceptance": {
+    "endpoint_ordering": "Across at least five paired seeds, MSW2(smallest SAD) < MSW2(largest SAD) with a paired bootstrap 95% confidence interval for largest-minus-smallest strictly above zero.",
+    "rank_association": "A later predeclared multi-direction round must show positive rank association between geometry eigenvalue and MSW2 with uncertainty.",
+    "claim_1_scope": "Generation-preference ordering only; the eigenvector definition and geometry construction are checked separately."
+  },
+  "integrity_failure": "The verifier exits nonzero on non-finite samples or losses, wrong step/sample/projection counts, a failed exact-setup audit, metric disagreement, checker failure, or a negative control that is not rejected."
+}

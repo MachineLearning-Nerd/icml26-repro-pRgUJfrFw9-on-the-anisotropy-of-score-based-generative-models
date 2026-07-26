@@ -58,6 +58,7 @@ def main():
     frozen_calibrations = {
         "claim_1_4_profile",
         "claim_1_4_geometry",
+        "claim_1_4_geometry_adaptive",
     }
     checkers.extend(
         checker
