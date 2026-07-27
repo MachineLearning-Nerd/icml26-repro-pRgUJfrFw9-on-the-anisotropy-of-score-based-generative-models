@@ -62,6 +62,7 @@ def main():
         "claim_1_4_profile",
         "claim_1_4_geometry",
         "claim_1_4_geometry_adaptive",
+        "claim_1_4_geometry_million_shard",
     }
     checkers.extend(
         checker

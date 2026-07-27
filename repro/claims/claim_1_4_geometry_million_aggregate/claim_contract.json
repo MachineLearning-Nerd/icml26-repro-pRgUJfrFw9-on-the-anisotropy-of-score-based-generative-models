@@ -1,0 +1,21 @@
+{
+  "claims": [1, 4],
+  "stage": "paper_scale_one_million_geometry_aggregate",
+  "scientific_status": "GEOMETRY_ONLY_UNTIL_GENERATION",
+  "exact_contract": {
+    "network_count": 1000000,
+    "shard_a": "500000 fresh networks, seeds 700000-1199999",
+    "shard_b": "500000 fresh networks, seeds 1200000-1699999",
+    "aggregation": "equal-weight mean of the two shard means",
+    "architecture": "author D=256 iDDPM U-Net",
+    "probe": "zero input and one uniform diffusion timestep per fresh initialization"
+  },
+  "stability_gate": {
+    "individual_vector": "absolute cross-shard overlap >= 0.85",
+    "local_band": "mean principal-angle cosine for the local 9-vector band >= 0.75",
+    "policy": "Report all indices. Never relabel an unstable interior vector as stable."
+  },
+  "uncertainty": "Eigenvalue intervals use a fixed-seed nonparametric bootstrap over the four independent 250000-network quarter matrices.",
+  "integrity_failure": "The verifier exits nonzero on provenance, count, seed-disjointness, hash, matrix reconstruction, PSD/eigen residual, independent checker, no-GPU, or negative-control failure.",
+  "claim_verdict": "Geometry completion alone does not verify or falsify Claims 1 or 4."
+}

@@ -1,0 +1,7 @@
+{
+  "estimated_required_cpu_cores": 1,
+  "estimated_runtime_minutes": 5,
+  "selected_backend": "local",
+  "gpu_allowed": false,
+  "routing_reason": "This integration decodes and averages two 256x256 matrices and performs small eigendecompositions. It is expected to use one CPU core and finish within five minutes, so local execution is authorized."
+}
