@@ -1,11 +1,15 @@
 {
   "judged_revision": "33d98421a79a7686497639f2d4d6163fc5acfa3f",
   "manifest": "historical/judged-33d98421/protected_manifest.tsv",
-  "mapping": "Each judged path p is preserved at historical/judged-33d98421/p.",
-  "old_file_count": 16,
-  "matched_file_count": 16,
+  "mapping": "An unchanged judged file remains at its original root path. A superseded text file is preserved at historical/judged-33d98421/<original path>.",
+  "old_file_count": 17,
+  "matched_file_count": 17,
+  "unchanged_at_original_path_count": 10,
+  "preserved_at_historical_path_count": 7,
+  "binary_upload_count": 0,
   "missing_file_count": 0,
   "hash_mismatch_count": 0,
   "old_content_set_is_subset_of_candidate": true,
-  "checked_with": "SHA-256 over every protected-manifest entry"
+  "checked_with": "SHA-256 over every protected-manifest entry after applying the publication mapping",
+  "text_only_upload_note": "The unchanged SVG and PNG assets remain at their judged root paths and are not uploaded or overwritten."
 }
