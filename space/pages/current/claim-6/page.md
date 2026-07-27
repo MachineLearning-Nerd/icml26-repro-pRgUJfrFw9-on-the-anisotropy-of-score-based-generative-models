@@ -80,8 +80,10 @@ uv sync --locked && .venv/bin/python repro/run_campaign.py
 Git `2d1c974bd148eb0088590b216581d48ea230d077`; run
 `af45ac22-f33b-447a-94e4-3f9614b8f66b`. Pre-run estimate: 8 cores, 2–5
 minutes. Hugging Face `cpu-upgrade` reported 64 logical / 32 physical CPUs,
-affinity 64. Full job 42 seconds; Claim 6 checker 5.788714 seconds; cumulative
-suite 14.460175 seconds; no GPU.
+affinity 64. Runtime: 42 seconds for the full job, 5.788714 seconds for the
+Claim 6 checker, and 14.460175 seconds for the cumulative suite; no GPU.
+All dimensions, sample counts, thresholds, and deterministic seeds were fixed
+in committed source before execution.
 
 This proves the propositions for their specified output layers. It does not
 claim that every unconstrained architecture with the same broad label has the

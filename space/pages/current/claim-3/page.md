@@ -18,6 +18,14 @@ remain extrema. Source: arXiv:2510.22899v1, alignment definition
 [Exact contract](evidence/claim_3/claim_contract.json) ·
 [source audit](evidence/claim_3/source_audit.md)
 
+## Assumptions and quantifiers
+
+The contract covers every finite dimension `D`, positive-semidefinite
+`G_F` and `M`, descending eigenvalue order, and every orthogonal `W`.
+Repeated eigenvalues are allowed and may make the optimizer non-unique.
+The proof uses no stochastic sampling assumption; finite sweeps are regression
+checks, not the basis for the universal quantifier.
+
 ## Why this establishes the universal statement
 
 Set `R=Uᵀ W V` and `P_ij=R_ij²`. Orthogonality makes every row and column sum

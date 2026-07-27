@@ -57,6 +57,18 @@
         "children": []
       },
       {
+        "slug": "release-report",
+        "title": "Release report and score forecast",
+        "file": "pages/release-report/page.md",
+        "children": []
+      },
+      {
+        "slug": "evaluator-blind-red-team",
+        "title": "Evaluator-blind red-team",
+        "file": "pages/evaluator-blind-red-team/page.md",
+        "children": []
+      },
+      {
         "slug": "historical-rejected-baseline",
         "title": "Historical rejected baseline",
         "file": "pages/historical-rejected-baseline/page.md",

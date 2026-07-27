@@ -48,6 +48,8 @@ published revision.
 | [Current Claim 6](#/current-claim-6) |
 | [Current cumulative verification](#/current-verification-run) |
 | [Evaluator-visible evidence matrix](#/evidence-matrix) |
+| [Release report](#/release-report) |
+| [Evaluator-blind red-team](#/evaluator-blind-red-team) |
 | [Historical rejected baseline](#/historical-rejected-baseline) |
 
 The exact judged 5/12 Space revision is retained unchanged under its protected
