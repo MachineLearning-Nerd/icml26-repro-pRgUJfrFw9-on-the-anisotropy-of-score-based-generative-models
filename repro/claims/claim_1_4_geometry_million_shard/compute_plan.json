@@ -1,0 +1,14 @@
+{
+  "estimated_required_cpu_cores": 32,
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "expected_allocated_physical_cores": 32,
+  "expected_allocated_logical_cpus": 64,
+  "worker_processes": 32,
+  "threads_per_worker": 1,
+  "estimated_runtime_hours": [0.5, 3.0],
+  "runtime_uncertain": true,
+  "timeout_hours": 4,
+  "gpu_allowed": false,
+  "routing_reason": "The shard constructs and evaluates 500000 fresh iDDPM networks and computes their 256x256 outer products. It is explicitly 32-process and has uncertain multi-hour runtime, so it must use Hugging Face cpu-upgrade."
+}

@@ -1,0 +1,8 @@
+{
+  "shard": "A",
+  "network_count": 500000,
+  "seed_start": 600000,
+  "worker_count": 32,
+  "task_count": 128,
+  "selected_indices": [0, 31, 63, 95, 127, 159, 191, 223, 255]
+}

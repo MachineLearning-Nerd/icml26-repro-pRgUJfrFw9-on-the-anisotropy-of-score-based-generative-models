@@ -1,0 +1,20 @@
+{
+  "claims": [1, 4],
+  "stage": "paper_scale_geometry_half_shard",
+  "scientific_status": "PARTIAL_UNTIL_TWO_SHARDS_ARE_AGGREGATED_AND_DIRECTIONS_ARE_USED_FOR_GENERATION",
+  "source_target": "Figure 6 geometry estimated from one million fresh default-initialized D=256 iDDPM U-Nets under the default zero-input and uniformly sampled timestep probe.",
+  "shard_contract": {
+    "networks": 500000,
+    "fresh_network_per_sample": true,
+    "input": "zero",
+    "timesteps": "uniform random over 1000 diffusion steps",
+    "aggregation": "streaming arithmetic mean of score outer products",
+    "independent_parity_halves": 2,
+    "workers": 32,
+    "threads_per_worker": 1
+  },
+  "aggregate_contract": "Two prespecified disjoint 500000-network seed shards are averaged with equal weight. Only that aggregate may be described as the paper-scale one-million-network geometry.",
+  "direction_gate": "Before an interior SAD enters generation experiments, its individual-vector overlap and its local 9-vector band overlap must be audited across independent half-million shards. Near-degenerate unstable vectors cannot be treated as identifiable.",
+  "integrity_failure": "The verifier exits nonzero on wrong counts, insufficient CPU affinity, PSD/eigen residual failure, payload hash or independent eigensolver disagreement, GPU use, or a negative control that is not rejected.",
+  "claim_verdict": "This shard alone cannot verify or falsify either claim."
+}

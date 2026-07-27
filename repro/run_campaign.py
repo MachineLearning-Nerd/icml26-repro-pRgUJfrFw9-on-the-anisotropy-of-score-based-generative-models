@@ -33,21 +33,24 @@ def cpu_metadata():
 
 def run_checker(checker):
     started = time.perf_counter()
-    process = subprocess.run(
+    process = subprocess.Popen(
         [sys.executable, str(checker)],
         cwd=ROOT,
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
-        check=False,
+        bufsize=1,
     )
+    assert process.stdout is not None
+    print(f"\nCHECKER={checker.relative_to(ROOT)}", flush=True)
+    for line in process.stdout:
+        print(line, end="", flush=True)
+    return_code = process.wait()
     elapsed = time.perf_counter() - started
-    print(f"\nCHECKER={checker.relative_to(ROOT)}")
-    print(process.stdout, end="" if process.stdout.endswith("\n") else "\n")
-    print(f"CHECKER_EXIT={process.returncode} CHECKER_RUNTIME_SECONDS={elapsed:.6f}")
+    print(f"CHECKER_EXIT={return_code} CHECKER_RUNTIME_SECONDS={elapsed:.6f}")
     return {
         "checker": str(checker.relative_to(ROOT)),
-        "exit_code": process.returncode,
+        "exit_code": return_code,
         "runtime_seconds": elapsed,
     }
 
@@ -58,6 +61,7 @@ def main():
     frozen_calibrations = {
         "claim_1_4_profile",
         "claim_1_4_geometry",
+        "claim_1_4_geometry_adaptive",
     }
     checkers.extend(
         checker
