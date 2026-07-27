@@ -1,0 +1,8 @@
+{
+  "estimated_required_cores": 1,
+  "estimated_runtime_seconds": 5,
+  "formal_backend": "hf",
+  "formal_flavor": "cpu-upgrade",
+  "routing_reason": "The aggregate itself is short and single-core, but the fixed cumulative command includes prior numerical checkers whose library thread allocation is uncertain; formal evidence is therefore routed to HF cpu-upgrade.",
+  "gpu_allowed": false
+}

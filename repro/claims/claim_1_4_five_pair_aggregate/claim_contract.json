@@ -1,0 +1,13 @@
+{
+  "claims": [1, 4],
+  "stage": "historical_five_pair_endpoint_aggregate",
+  "exact_test": "For five predeclared paired seeds, compare the exact author-iDDPM SW2 and MSW2 at the largest and smallest SAD directions.",
+  "acceptance": {
+    "pairwise": "largest minus smallest is positive for every seed and both metrics",
+    "uncertainty": "the exact percentile 95% interval over all 5^5 paired bootstrap resamples is strictly above zero for both metrics",
+    "integrity": "all ten endpoint exact-setup and independent-checker flags pass",
+    "negative_control": "reversing endpoint labels must fail the positive-effect rule"
+  },
+  "scope": "Historical/downscaled corroboration only. The source geometry used 16000 networks, not the paper-scale one million, and cannot verify Claims 1 or 4.",
+  "verdict_if_passed": "BLOCKED_PENDING_PAPER_SCALE_GENERATION_AND_RANK_ASSOCIATION"
+}

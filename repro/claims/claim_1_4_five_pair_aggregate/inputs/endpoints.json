@@ -1,0 +1,120 @@
+{
+  "geometry": {
+    "network_count": 16000,
+    "largest_eigenvalue": 133.58986350488536,
+    "smallest_eigenvalue": 0.09507780044162173,
+    "limitation": "Historical variance-allocated estimate; not the accepted one-million-network paper-scale geometry."
+  },
+  "endpoints": [
+    {
+      "seed_index": 0,
+      "paired_seed": 510000,
+      "endpoint": "largest",
+      "run_id": "9fcbdbf1-4538-42dc-989a-8e06c73a1a9e",
+      "commit": "17cada3",
+      "sw2": 12.33275314488294,
+      "msw2": 55.05651171679763,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 0,
+      "paired_seed": 510000,
+      "endpoint": "smallest",
+      "run_id": "40db809d-2943-4109-b729-c84cba0831b8",
+      "commit": "18217ee",
+      "sw2": 9.29218655134452,
+      "msw2": 32.75337306699304,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 1,
+      "paired_seed": 510100,
+      "endpoint": "largest",
+      "run_id": "68a18e4f-039d-4bb2-9390-07b288c6d95c",
+      "commit": "399af7d",
+      "sw2": 11.6415569118311,
+      "msw2": 44.125906008315425,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 1,
+      "paired_seed": 510100,
+      "endpoint": "smallest",
+      "run_id": "04bc6fca-c4db-4ba3-96b9-ac9b645d2414",
+      "commit": "e99aa00",
+      "sw2": 8.04568403636628,
+      "msw2": 26.51259788628205,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 2,
+      "paired_seed": 510200,
+      "endpoint": "largest",
+      "run_id": "6d721405-d3ac-4293-9a86-4d0e2215b0f2",
+      "commit": "477c2e0",
+      "sw2": 11.335423539050849,
+      "msw2": 43.46859273875219,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 2,
+      "paired_seed": 510200,
+      "endpoint": "smallest",
+      "run_id": "81e77133-f761-45c9-b5d6-bf3d3e6d7c8c",
+      "commit": "f12003d",
+      "sw2": 4.844961567734442,
+      "msw2": 19.65450095929643,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 3,
+      "paired_seed": 510300,
+      "endpoint": "largest",
+      "run_id": "84a4a303-18f0-4cf0-b81e-5256d335921a",
+      "commit": "36860e8",
+      "sw2": 11.445997817214622,
+      "msw2": 43.986689548338084,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 3,
+      "paired_seed": 510300,
+      "endpoint": "smallest",
+      "run_id": "69a455f7-31a3-4959-bf63-5f36c5fd3079",
+      "commit": "010fd9a",
+      "sw2": 7.624955419469058,
+      "msw2": 28.03656343349085,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 4,
+      "paired_seed": 510400,
+      "endpoint": "largest",
+      "run_id": "c77ad311-2b85-49e6-8d55-cdfce5921bff",
+      "commit": "1e590ad",
+      "sw2": 10.13676427714908,
+      "msw2": 41.61107799040344,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 4,
+      "paired_seed": 510400,
+      "endpoint": "smallest",
+      "run_id": "5d16bc43-eacc-4179-9b41-4de334f1bd41",
+      "commit": "2bdfa23",
+      "sw2": 5.114365831069946,
+      "msw2": 23.446291319954128,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    }
+  ]
+}
