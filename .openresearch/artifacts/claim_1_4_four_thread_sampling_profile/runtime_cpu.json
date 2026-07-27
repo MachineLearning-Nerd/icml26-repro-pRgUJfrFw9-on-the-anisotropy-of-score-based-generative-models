@@ -1,0 +1,16 @@
+{
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "gpu_used": false,
+  "estimated_required_cores": 4,
+  "actual_affinity_cpus": 64,
+  "actual_logical_cpus": 64,
+  "actual_physical_cpus": 32,
+  "torch_intraop_threads": 4,
+  "torch_interop_threads": 32,
+  "sampling_runtime_seconds": 1220.2956476850668,
+  "verifier_runtime_seconds": 1236.1571990440134,
+  "campaign_runtime_seconds": 1257.9998485600809,
+  "run_id": "e443c307-fe3a-443a-81f3-1767bec3f4b0",
+  "git_commit": "7add11d5a2891b3cd957538af6dd1775e8e08409"
+}

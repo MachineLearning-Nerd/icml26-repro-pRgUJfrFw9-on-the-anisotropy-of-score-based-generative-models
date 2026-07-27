@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "finite_losses": true,
+    "finite_positive_timings": true,
+    "four_conditions": true,
+    "largest_direction_unit": true,
+    "negative_control_rejected": true,
+    "no_gpu": true,
+    "smallest_direction_unit": true,
+    "two_steps_each": true
+  },
+  "implementation": "independent NumPy timing/loss audit; no primary-verifier imports",
+  "largest_loss_relative_error": 0.0,
+  "largest_speedup": 0.9732020618371382,
+  "mechanism_supported": false,
+  "passed": true,
+  "smallest_loss_relative_error": 0.0,
+  "smallest_speedup": 1.1343797692861637
+}

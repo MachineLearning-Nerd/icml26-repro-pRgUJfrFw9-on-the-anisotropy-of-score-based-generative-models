@@ -1,0 +1,39 @@
+{
+  "all_passed": true,
+  "checkers": [
+    {
+      "checker": "repro/src/verify_sad.py",
+      "exit_code": 0,
+      "runtime_seconds": 0.7440556680085137
+    },
+    {
+      "checker": "repro/claims/claim_1_4_four_thread_sampling_profile/verify.py",
+      "exit_code": 0,
+      "runtime_seconds": 1236.1571990440134
+    },
+    {
+      "checker": "repro/claims/claim_2/verify.py",
+      "exit_code": 0,
+      "runtime_seconds": 5.546563469921239
+    },
+    {
+      "checker": "repro/claims/claim_3/verify.py",
+      "exit_code": 0,
+      "runtime_seconds": 2.9480562919052318
+    },
+    {
+      "checker": "repro/claims/claim_6/verify.py",
+      "exit_code": 0,
+      "runtime_seconds": 12.590259760036133
+    }
+  ],
+  "cpu": {
+    "affinity_cpus": 64,
+    "logical_cpus": 64,
+    "machine": "x86_64",
+    "physical_cpus": 32,
+    "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",
+    "python": "3.12.12 (main, Feb  3 2026, 03:12:00) [GCC 12.2.0]"
+  },
+  "runtime_seconds": 1257.9998485600809
+}

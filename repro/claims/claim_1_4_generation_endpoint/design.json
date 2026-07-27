@@ -1,0 +1,12 @@
+{
+  "endpoint": "largest",
+  "geometry_index": 0,
+  "paired_seed": 510000,
+  "model_seed": 510001,
+  "training_data_seed": 510002,
+  "shuffle_seed": 510003,
+  "training_noise_seed": 510004,
+  "sampling_seed": 510005,
+  "metric_target_seed": 510006,
+  "projection_seed": 510007
+}

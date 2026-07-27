@@ -1,0 +1,25 @@
+{
+  "claim_ids": [1, 4],
+  "status": "DIRECTION_SELECTION_GATE",
+  "target": "The same D=256 iDDPM average geometry and uniform 1000-timestep default probe as the paper",
+  "pilot": {
+    "networks": 2000,
+    "design": "two independent networks at every timestep",
+    "use": "allocate final samples from an observed conditional outer-product variability proxy; pilot samples are excluded from the final estimate"
+  },
+  "final_estimator": {
+    "networks": 16000,
+    "minimum_per_timestep": 4,
+    "allocation_granularity": 4,
+    "independent_quarters": 4,
+    "aggregation": "estimate each conditional geometry separately, then average the 1000 conditional estimates uniformly"
+  },
+  "readiness": {
+    "endpoint_vector_overlap": "independent alternating-half absolute overlap >=0.85",
+    "endpoint_band_overlap": "independent alternating-half mean cosine for endpoint 9-vector bands >=0.75",
+    "spectrum": "endpoint eigenvalue ordering and bootstrap intervals reported",
+    "matrix_checks": "PSD, orthonormality, eigen residual, independent Torch solver",
+    "control": "random directions rejected as eigenvectors"
+  },
+  "scientific_verdict": "Direction readiness does not verify generation preference; Claims 1 and 4 remain BLOCKED until actual training and sampling."
+}

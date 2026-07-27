@@ -1,0 +1,8 @@
+{
+  "estimated_required_cpu_cores": 32,
+  "estimated_runtime_minutes": "12-25",
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "gpu_allowed": false,
+  "reason": "The estimator executes 18,000 fresh exact iDDPM initializations/forwards and four full eigenspace audits; this is multithreaded and far beyond the local limit."
+}

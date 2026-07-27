@@ -1,0 +1,9 @@
+{
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "estimated_physical_cores": 32,
+  "estimated_runtime_minutes": [3, 12],
+  "actual_allocation_recorded_by_verifier": true,
+  "gpu_allowed": false,
+  "routing_reason": "Observed largest-SAD steps take roughly 52 seconds on HF; same-host four-condition runtime is uncertain and multi-core."
+}

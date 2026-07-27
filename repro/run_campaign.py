@@ -63,12 +63,26 @@ def main():
         "claim_1_4_geometry",
         "claim_1_4_geometry_adaptive",
         "claim_1_4_geometry_million_shard",
+        "claim_1_4_cpu_value_diagnostic",
+        "claim_1_4_cpu_thread_scaling",
+        "claim_1_4_four_thread_sampling_profile",
     }
-    checkers.extend(
+    active_claim_checkers = [
         checker
         for checker in sorted((ROOT / "repro" / "claims").glob("*/verify.py"))
         if checker.parent.name not in frozen_calibrations
+    ]
+    priority = {
+        "claim_1_4_geometry_million_aggregate": 0,
+        "claim_1_4_generation_endpoint": 1,
+    }
+    active_claim_checkers.sort(
+        key=lambda checker: (
+            priority.get(checker.parent.name, 2),
+            checker.parent.name,
+        )
     )
+    checkers.extend(active_claim_checkers)
 
     print("CAMPAIGN_FIXED_COMMAND=uv sync --locked && .venv/bin/python repro/run_campaign.py")
     print("CPU_METADATA=" + json.dumps(cpu_metadata(), sort_keys=True))

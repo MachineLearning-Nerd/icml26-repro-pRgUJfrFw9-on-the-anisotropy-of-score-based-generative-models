@@ -1,0 +1,11 @@
+{
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "estimated_physical_cores": 32,
+  "estimated_logical_cpus": 64,
+  "estimated_runtime_minutes": [8, 30],
+  "timeout": "1h",
+  "gpu_allowed": false,
+  "routing_reason": "The exact batch-1000 iDDPM diagnostic uses multiple cores, has uncertain runtime, and therefore must run on HF cpu-upgrade rather than locally.",
+  "decision_after_run": "Use the selected count only if numerical hashes are exact and the independent checker agrees. Otherwise leave the endpoint design unchanged and BLOCKED."
+}

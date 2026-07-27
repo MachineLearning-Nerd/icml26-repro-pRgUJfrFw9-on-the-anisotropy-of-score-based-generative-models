@@ -1,0 +1,11 @@
+{
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "actual_logical_cpus": 64,
+  "actual_physical_cpus": 32,
+  "affinity_cpus": 64,
+  "gpu_used": false,
+  "diagnostic_runtime_seconds": 450.70765092398506,
+  "campaign_runtime_seconds": 505.032785,
+  "run_id": "977b4d66-95a8-4e98-aa63-0f7b2b83b0f6"
+}

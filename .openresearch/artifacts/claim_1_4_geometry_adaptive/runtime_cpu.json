@@ -1,0 +1,11 @@
+{
+  "actual_affinity_cpus": 64,
+  "actual_logical_cpus": 64,
+  "actual_physical_cpus": 32,
+  "backend": "hf",
+  "estimator_runtime_seconds": 1657.9766111620702,
+  "flavor": "cpu-upgrade",
+  "gpu_used": false,
+  "requested_core_estimate": 32,
+  "total_runtime_seconds": 1852.1566860929597
+}

@@ -1,0 +1,7 @@
+{
+  "control": "100 reverse steps presented as the exact 1,000-step path",
+  "expected_to_fail": true,
+  "observed_steps": 100,
+  "rejected": true,
+  "required_steps": 1000
+}

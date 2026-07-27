@@ -90,6 +90,13 @@ Line anchors below refer to `main.tex` in the arXiv source tarball.
   different. Mode-collapse language is specifically attached to the MNIST
   samples (over-representation of digit “1”), not universally quantified over
   all three datasets.
+- Figure 9 bar audit from the primary ar5iv image
+  `https://ar5iv.labs.arxiv.org/html/2510.22899/assets/x15.png` (retrieved
+  2026-07-26 with the explicit campaign User-Agent; SHA-256
+  `b7e23901195f548379823dff020de27a4424cdccfc62bd2da60cad6142751922`):
+  `W_min / I / W_max` is `0.11 / 1.91 / 1.81` for MNIST,
+  `0.27 / 1.18 / 1.11` for CelebA-HQ, and `0.69 / 1.49 / 1.81` for CIFAR-10.
+  This resolves the ambiguous reading order in plain-text figure extraction.
 
 ### Claim 6: architecture geometry propositions
 

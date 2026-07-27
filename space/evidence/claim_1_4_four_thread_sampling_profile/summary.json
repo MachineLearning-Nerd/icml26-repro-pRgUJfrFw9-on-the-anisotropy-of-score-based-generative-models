@@ -1,0 +1,8 @@
+{
+  "independent_checker_passed": true,
+  "projected_training_plus_sampling_hours": 4.918397886477114,
+  "sampling_seconds_for_1k_samples": 1220.2956476850668,
+  "scientific_status": "CPU_RESOURCE_CALIBRATION_ONLY; Claims 1 and 4 remain BLOCKED",
+  "threads": 4,
+  "training_resource_gate_would_pass": true
+}

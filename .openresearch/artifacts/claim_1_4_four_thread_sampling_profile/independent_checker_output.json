@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "allocated_cpu_recorded": true,
+    "eta_one": true,
+    "exact_batch": true,
+    "exact_reverse_steps": true,
+    "finite_output": true,
+    "four_threads": true,
+    "negative_control_rejected": true,
+    "no_gpu": true,
+    "positive_runtime": true,
+    "projection_math": true,
+    "status_is_calibration": true,
+    "within_setting_deterministic": true
+  },
+  "implementation": "independent arithmetic/integrity audit from raw profile; no primary-verifier imports",
+  "passed": true,
+  "recomputed_projected_sampling_seconds": 12202.956476850668,
+  "recomputed_projected_training_plus_sampling_hours": 4.918397886477114,
+  "recomputed_projected_training_seconds": 5503.27591446694
+}

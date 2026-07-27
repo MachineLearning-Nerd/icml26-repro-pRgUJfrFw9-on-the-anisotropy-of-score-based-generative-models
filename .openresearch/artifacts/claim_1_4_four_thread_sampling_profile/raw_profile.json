@@ -1,0 +1,72 @@
+{
+  "compute": {
+    "affinity_cpus": 64,
+    "gpu_used": false,
+    "logical_cpus": 64,
+    "physical_cpus": 32,
+    "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",
+    "torch_interop_threads": 32,
+    "torch_intraop_threads": 4
+  },
+  "model_state_sha256": "a9bcd048ee4c4ca214003db91b06d11636274916beb25aba808b3fb2d2ea3fb4",
+  "negative_control": {
+    "control": "100 reverse steps presented as the exact 1,000-step path",
+    "expected_to_fail": true,
+    "observed_steps": 100,
+    "rejected": true,
+    "required_steps": 1000
+  },
+  "peak_rss_megabytes": 874.89453125,
+  "policy": {
+    "cross_32_thread_loss_relative_error": 6.791127202158818e-08,
+    "four_thread_repetitions_bitwise_identical": true,
+    "reason": "fastest deterministic within-setting schedule; paper does not specify CPU reduction order",
+    "same_policy_required_for_both_endpoints": true,
+    "torch_intraop_threads": 4
+  },
+  "projection": {
+    "projected_sampling_seconds": 12202.956476850668,
+    "projected_training_plus_sampling_hours": 4.918397886477114,
+    "projected_training_seconds": 5503.27591446694,
+    "sampling_batches": 10,
+    "training_resource_gate_would_pass": true,
+    "training_seconds_per_update": 2.75163795723347,
+    "training_updates": 2000
+  },
+  "sampling": {
+    "finite": true,
+    "mean": -18.5428524017334,
+    "runtime_seconds_for_1k_samples": 1220.2956476850668,
+    "sha256": "58e53d0e1cd96be179fe1417c827c2167ddf4a2bdce6f132f38376197442ed91",
+    "shape": [
+      1000,
+      1,
+      16,
+      16
+    ],
+    "standard_deviation": 233.47576904296875
+  },
+  "scientific_status": "CPU_RESOURCE_CALIBRATION_ONLY; Claims 1 and 4 remain BLOCKED",
+  "seeds": {
+    "initial_noise": 640002,
+    "model": 640001,
+    "reverse_noise": 640003
+  },
+  "setup": {
+    "architecture": "author iDDPM U-Net",
+    "batch_size": 1000,
+    "config": "configs/1x16x16-iddpm.json",
+    "diffusion_steps": 1000,
+    "eta": 1.0,
+    "model_parameters": 381121,
+    "shape": [
+      1,
+      16,
+      16
+    ],
+    "steps_argument": null,
+    "trained": false,
+    "training_status_relevance": "runtime calibration only; architecture and reverse loop are exact"
+  },
+  "total_runtime_seconds": 1220.3365535540506
+}
