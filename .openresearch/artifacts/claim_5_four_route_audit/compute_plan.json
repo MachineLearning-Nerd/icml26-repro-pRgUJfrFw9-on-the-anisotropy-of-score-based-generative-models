@@ -1,0 +1,12 @@
+{
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "estimated_required_cores": 4,
+  "expected_allocated_logical_cpus": 64,
+  "expected_allocated_physical_cpus": 32,
+  "torch_intraop_threads": 4,
+  "estimated_runtime_minutes": [5, 45],
+  "timeout": "1h",
+  "gpu_allowed": false,
+  "routing_reason": "Three exact batch-500 forward/backward feasibility probes have uncertain runtime, use four CPU threads, and therefore cannot run locally."
+}

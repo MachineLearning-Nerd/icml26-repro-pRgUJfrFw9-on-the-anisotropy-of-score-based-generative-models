@@ -1,0 +1,198 @@
+{
+  "claim": 5,
+  "compute": {
+    "affinity_cpus": 64,
+    "gpu_used": false,
+    "logical_cpus": 64,
+    "physical_cpus": 32,
+    "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",
+    "torch_interop_threads": 32,
+    "torch_intraop_threads": 4
+  },
+  "confidence": "LOW",
+  "fixed_command": "uv sync --locked && .venv/bin/python repro/run_campaign.py",
+  "negative_control": {
+    "control": "Treat one timed optimizer update on deterministic same-shape tensors as verification of Claim 5.",
+    "expected_to_fail": true,
+    "failed_requirements": {
+      "alignment_transforms": true,
+      "five_seeds": true,
+      "full_training_horizon": true,
+      "generation": true,
+      "real_datasets": true,
+      "sw2": true
+    },
+    "rejected": true
+  },
+  "peak_rss_megabytes": 15567.0,
+  "routes": [
+    {
+      "deviations": "same-shape deterministic tensors, one warm-up plus one timed update, no real data/transforms/full horizon/generation/SW2/seeds",
+      "name": "exact-architecture and exact-batch CPU feasibility",
+      "route": 1,
+      "rows": [
+        {
+          "attempted": true,
+          "batch_size": 500,
+          "config": "configs/1x28x28-iddpm.json",
+          "dataset": "MNIST",
+          "diffusion_steps": 1000,
+          "executed": true,
+          "linear_training_projection_hours": 226.67969658181795,
+          "model_parameters": 551713,
+          "optimizer_steps_in_paper": 100000,
+          "projection_status": "RESOURCE_PLANNING_ONLY; not claim evidence and excludes sampling, geometry, transforms, metrics, and five seeds",
+          "seconds_per_optimizer_update": 8.160469076945446,
+          "seed": 750001,
+          "shape": [
+            1,
+            28,
+            28
+          ],
+          "timed_loss": 0.631726086139679,
+          "warmup_loss": 1.266980767250061
+        },
+        {
+          "attempted": true,
+          "batch_size": 500,
+          "config": "configs/1x56x56-iddpm.json",
+          "dataset": "CelebA-HQ",
+          "diffusion_steps": 1000,
+          "executed": true,
+          "linear_training_projection_hours": 914.1848571372167,
+          "model_parameters": 718049,
+          "optimizer_steps_in_paper": 100000,
+          "projection_status": "RESOURCE_PLANNING_ONLY; not claim evidence and excludes sampling, geometry, transforms, metrics, and five seeds",
+          "seconds_per_optimizer_update": 32.9106548569398,
+          "seed": 750002,
+          "shape": [
+            1,
+            56,
+            56
+          ],
+          "timed_loss": 0.5232275724411011,
+          "warmup_loss": 1.0176864862442017
+        },
+        {
+          "attempted": true,
+          "batch_size": 500,
+          "config": "configs/3x32x32-iddpm.json",
+          "dataset": "CIFAR-10",
+          "diffusion_steps": 1000,
+          "executed": true,
+          "linear_training_projection_hours": 535.3700834999067,
+          "model_parameters": 719203,
+          "optimizer_steps_in_paper": 200000,
+          "projection_status": "RESOURCE_PLANNING_ONLY; not claim evidence and excludes sampling, geometry, transforms, metrics, and five seeds",
+          "seconds_per_optimizer_update": 9.636661502998322,
+          "seed": 750003,
+          "shape": [
+            3,
+            32,
+            32
+          ],
+          "timed_loss": 0.8428585529327393,
+          "warmup_loss": 1.0942082405090332
+        }
+      ],
+      "status": "RESOURCE_EVIDENCE_ONLY"
+    },
+    {
+      "audit": {
+        "author_repository": {
+          "audited_commit": "65b63d00f5e86c98290aa22d214dcfa0504fffd7",
+          "checkpoint_files_in_commit": 0,
+          "default_branch": "main",
+          "last_push": "2025-10-28T11:26:04Z",
+          "raw_result_files_in_commit": 0,
+          "release_count": 0,
+          "tag_count": 0,
+          "url": "https://github.com/andreasfloros/score-anisotropy"
+        },
+        "hugging_face_searches": {
+          "kinds": [
+            "models",
+            "datasets",
+            "spaces"
+          ],
+          "matching_result_count_per_kind_and_query": 0,
+          "queries": [
+            "2510.22899",
+            "score-anisotropy",
+            "On the Anisotropy of Score-Based Generative Models"
+          ]
+        },
+        "interpretation": "No public checkpoint or raw five-seed result artifact was located. Absence is a capability blocker, not evidence for or against Claim 5.",
+        "retrieval_date": "2026-07-26",
+        "user_agent": "OpenResearch-Reproduction/1.0 (+https://github.com/MachineLearning-Nerd)"
+      },
+      "name": "primary public-artifact recovery",
+      "route": 2,
+      "scientific_interpretation": "Missing public artifacts block direct evaluation but do not support or contradict Claim 5.",
+      "status": "UNRESOLVED_NO_PUBLIC_CHECKPOINT_OR_RAW_SEEDS"
+    },
+    {
+      "all_three_published_minima_better_than_default": true,
+      "comparisons": {
+        "CIFAR-10": {
+          "I": 1.49,
+          "I_minus_W_min": 0.8,
+          "W_max": 1.81,
+          "W_min": 0.69,
+          "published_order_supports_minimum": true,
+          "relative_reduction_vs_I": 0.5369127516778524
+        },
+        "CelebA-HQ": {
+          "I": 1.18,
+          "I_minus_W_min": 0.9099999999999999,
+          "W_max": 1.11,
+          "W_min": 0.27,
+          "published_order_supports_minimum": true,
+          "relative_reduction_vs_I": 0.771186440677966
+        },
+        "MNIST": {
+          "I": 1.91,
+          "I_minus_W_min": 1.7999999999999998,
+          "W_max": 1.81,
+          "W_min": 0.11,
+          "published_order_supports_minimum": true,
+          "relative_reduction_vs_I": 0.9424083769633508
+        }
+      },
+      "figure_sha256": "b7e23901195f548379823dff020de27a4424cdccfc62bd2da60cad6142751922",
+      "missing_capability": "raw five-seed values and uncertainty",
+      "name": "independent primary Figure 9 numerical audit",
+      "route": 3,
+      "status": "PAPER_VALUES_SUPPORT_CLAIM_BUT_ARE_NOT_REPRODUCTION"
+    },
+    {
+      "assumptions_rechecked": {
+        "batch_size": 500,
+        "datasets": [
+          "MNIST",
+          "CelebA-HQ",
+          "CIFAR-10"
+        ],
+        "diffusion_steps": 1000,
+        "metric": "SW2 with 64D projections",
+        "optimizer_steps": {
+          "CIFAR-10": 200000,
+          "CelebA-HQ": 100000,
+          "MNIST": 100000
+        },
+        "seeds": 5
+      },
+      "exact_counterexample_condition": "Under the exact paper setup, at least one named dataset has W_min SW2 greater than or equal to natural-alignment SW2, or direct exact regenerated evidence contradicts the reported effect.",
+      "name": "assumption-satisfying falsification search",
+      "published_aggregate_counterexamples": [],
+      "route": 4,
+      "status": "NO_VALID_FALSIFICATION_FOUND",
+      "valid_counterexample_found": false,
+      "why_not_falsified": "All published aggregates have W_min < I; unavailable raw seeds and unexecuted full training cannot be treated as contradiction."
+    }
+  ],
+  "scientific_status": "FOUR_ROUTES_COMPLETE; NO_DIRECT_REPRODUCTION_OR_VALID_FALSIFICATION",
+  "total_runtime_seconds": 103.89100419299211,
+  "unblocker": "Public exact checkpoints plus transformed datasets and raw five-seed outputs, or CPU resources sufficient for 45 exact full training-and-generation runs.",
+  "verdict": "BLOCKED"
+}

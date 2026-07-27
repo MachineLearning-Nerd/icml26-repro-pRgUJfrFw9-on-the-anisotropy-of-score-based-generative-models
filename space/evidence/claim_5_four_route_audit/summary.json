@@ -1,0 +1,9 @@
+{
+  "confidence": "LOW",
+  "independent_checker_passed": true,
+  "negative_control_rejected": true,
+  "routes_completed": 4,
+  "scientific_status": "FOUR_ROUTES_COMPLETE; NO_DIRECT_REPRODUCTION_OR_VALID_FALSIFICATION",
+  "valid_falsification": false,
+  "verdict": "BLOCKED"
+}
