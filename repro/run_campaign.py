@@ -66,6 +66,7 @@ def main():
         "claim_1_4_cpu_value_diagnostic",
         "claim_1_4_cpu_thread_scaling",
         "claim_1_4_four_thread_sampling_profile",
+        "claim_1_4_generation_endpoint",
     }
     active_claim_checkers = [
         checker

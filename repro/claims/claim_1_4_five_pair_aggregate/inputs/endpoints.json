@@ -1,0 +1,133 @@
+{
+  "geometry": {
+    "network_count": 1000000,
+    "largest_eigenvalue": 134.9141661931137,
+    "smallest_eigenvalue": 0.09433513949682383,
+    "aggregate_run_id": "3d7901fe-d3e0-4f41-b8a8-ebd077bc5da5",
+    "aggregate_commit": "b939c5b",
+    "aggregate_checker_passed": true,
+    "selected_direction_stability": {
+      "0": {
+        "absolute_vector_overlap": 0.9976952438160434,
+        "individual_direction_ready": true
+      },
+      "255": {
+        "absolute_vector_overlap": 0.1993975461110904,
+        "individual_direction_ready": false
+      }
+    },
+    "limitation": "The leading individual direction passes the preregistered cross-shard stability gate; the smallest full-estimator direction is deterministic but does not."
+  },
+  "endpoints": [
+    {
+      "seed_index": 0,
+      "paired_seed": 510000,
+      "endpoint": "largest",
+      "run_id": "cba66c9e-6aa8-4e6b-9501-41c751e7f30b",
+      "commit": "704eb01",
+      "sw2": 12.341826511429662,
+      "msw2": 54.83966108332887,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 0,
+      "paired_seed": 510000,
+      "endpoint": "smallest",
+      "run_id": "cd6eed98-f935-4e04-9daa-eb857b14eb55",
+      "commit": "a8e50e2",
+      "sw2": 9.818525236245598,
+      "msw2": 35.656101076047456,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 1,
+      "paired_seed": 510100,
+      "endpoint": "largest",
+      "run_id": "f1d8afea-6434-44f6-8ab9-cf80dae2e26a",
+      "commit": "2276e33",
+      "sw2": 11.568895662361294,
+      "msw2": 43.44230666975526,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 1,
+      "paired_seed": 510100,
+      "endpoint": "smallest",
+      "run_id": "0f159d16-70c8-4cd7-aedb-2375e8c474ae",
+      "commit": "9c72b69",
+      "sw2": 8.878388467007454,
+      "msw2": 29.750766263437967,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 2,
+      "paired_seed": 510200,
+      "endpoint": "largest",
+      "run_id": "0727ce00-94dc-4048-8965-9dcfb98c6d49",
+      "commit": "e178aa7",
+      "sw2": 11.349945893245224,
+      "msw2": 43.40047742167922,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 2,
+      "paired_seed": 510200,
+      "endpoint": "smallest",
+      "run_id": "ddb2f1de-6b5a-4449-99b1-56bb167f0407",
+      "commit": "8481740",
+      "sw2": 4.925079569936211,
+      "msw2": 19.025318342595725,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 3,
+      "paired_seed": 510300,
+      "endpoint": "largest",
+      "run_id": "fedab5dc-9171-4de6-8db5-d825c1c368dd",
+      "commit": "16f01b3",
+      "sw2": 11.61938670372604,
+      "msw2": 44.98406836036509,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 3,
+      "paired_seed": 510300,
+      "endpoint": "smallest",
+      "run_id": "70dd7dad-03ee-48b9-be32-af7ae5dc11be",
+      "commit": "84c71ad",
+      "sw2": 8.336563019950448,
+      "msw2": 28.45695698557571,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 4,
+      "paired_seed": 510400,
+      "endpoint": "largest",
+      "run_id": "e483f540-bf8b-4e0b-a306-9f15816fcc94",
+      "commit": "708b6d7",
+      "sw2": 10.211508390514693,
+      "msw2": 42.12825701429505,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    },
+    {
+      "seed_index": 4,
+      "paired_seed": 510400,
+      "endpoint": "smallest",
+      "run_id": "d11e5351-aa1b-4cb4-aab5-3e7b16e3ca4c",
+      "commit": "e39a7fc",
+      "sw2": 5.694857541150482,
+      "msw2": 21.3702337293825,
+      "exact_setup_passed": true,
+      "independent_checker_passed": true
+    }
+  ]
+}
