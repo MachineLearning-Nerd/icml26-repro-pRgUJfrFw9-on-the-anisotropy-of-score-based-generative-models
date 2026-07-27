@@ -1,0 +1,13 @@
+{
+  "control": "Treat one timed optimizer update on deterministic same-shape tensors as verification of Claim 5.",
+  "expected_to_fail": true,
+  "failed_requirements": {
+    "alignment_transforms": true,
+    "five_seeds": true,
+    "full_training_horizon": true,
+    "generation": true,
+    "real_datasets": true,
+    "sw2": true
+  },
+  "rejected": true
+}

@@ -27,6 +27,12 @@
         "children": []
       },
       {
+        "slug": "current-claim-5",
+        "title": "Current Claim 5 — BLOCKED",
+        "file": "pages/current/claim-5/page.md",
+        "children": []
+      },
+      {
         "slug": "current-claim-6",
         "title": "Current Claim 6 — VERIFIED",
         "file": "pages/current/claim-6/page.md",
@@ -41,5 +47,5 @@
     ]
   },
   "agent_view_tokens": 10400,
-  "revision": "claim6-candidate"
+  "revision": "claim5-blocked-candidate"
 }

@@ -12,7 +12,7 @@ Only claims marked VERIFIED or FALSIFIED receive a full-credit forecast.
 | [2 — exact linear DSM theorem](#/current-claim-2) | Proof reconstruction plus actual population/SGD training | VERIFIED |
 | [3 — exact alignment extrema](#/current-claim-3) | Symbolic/combinatorial proof reconstruction plus independent optimization | VERIFIED |
 | 4 | Campaign in progress | BLOCKED |
-| 5 | Campaign in progress | BLOCKED |
+| [5 — real-image alignment audit](#/current-claim-5) | Four distinct routes; no direct regeneration or valid counterexample | BLOCKED |
 | [6 — architecture geometries](#/current-claim-6) | Conditional-moment proof plus actual executable networks | VERIFIED |
 
 ## Navigation
@@ -21,6 +21,7 @@ Only claims marked VERIFIED or FALSIFIED receive a full-credit forecast.
 | --- |
 | [Current Claim 2](#/current-claim-2) |
 | [Current Claim 3](#/current-claim-3) |
+| [Current Claim 5](#/current-claim-5) |
 | [Current Claim 6](#/current-claim-6) |
 | [Historical rejected baseline](#/historical-rejected-baseline) |
 

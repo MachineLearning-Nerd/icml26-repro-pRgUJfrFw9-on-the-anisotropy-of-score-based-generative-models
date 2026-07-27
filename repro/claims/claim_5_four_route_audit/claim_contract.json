@@ -1,0 +1,24 @@
+{
+  "claim": 5,
+  "statement": "For MNIST, CelebA-HQ, and CIFAR-10, the alignment-minimizing transform W_min substantially and consistently improves five-seed average SW2 relative to natural alignment I under the exact iDDPM setup; the separate MNIST sample panel reports mode-collapse signs for W_max.",
+  "paper_setup": {
+    "datasets": {
+      "MNIST": [1, 28, 28],
+      "CelebA-HQ": [1, 56, 56],
+      "CIFAR-10": [3, 32, 32]
+    },
+    "samples_per_dataset": 10000,
+    "seeds": 5,
+    "batch_size": 500,
+    "diffusion_steps": 1000,
+    "optimizer_steps": {
+      "MNIST": 100000,
+      "CelebA-HQ": 100000,
+      "CIFAR-10": 200000
+    },
+    "metric": "SW2 with 64D normalized random projections"
+  },
+  "verification_requirement": "Direct regenerated five-seed results for all three datasets with transformations W_min, I, and W_max, raw seed values, uncertainty, controls, and exact setup; or a valid assumption-satisfying counterexample.",
+  "route_policy": "Run exactly three materially different verification-oriented routes. If confidence remains LOW, run a fourth route dedicated to falsification.",
+  "accepted_verdicts": ["VERIFIED", "FALSIFIED", "BLOCKED"]
+}

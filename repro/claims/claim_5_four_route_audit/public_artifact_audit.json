@@ -1,0 +1,28 @@
+{
+  "retrieval_date": "2026-07-26",
+  "user_agent": "OpenResearch-Reproduction/1.0 (+https://github.com/MachineLearning-Nerd)",
+  "author_repository": {
+    "url": "https://github.com/andreasfloros/score-anisotropy",
+    "audited_commit": "65b63d00f5e86c98290aa22d214dcfa0504fffd7",
+    "default_branch": "main",
+    "last_push": "2025-10-28T11:26:04Z",
+    "release_count": 0,
+    "tag_count": 0,
+    "checkpoint_files_in_commit": 0,
+    "raw_result_files_in_commit": 0
+  },
+  "hugging_face_searches": {
+    "kinds": [
+      "models",
+      "datasets",
+      "spaces"
+    ],
+    "queries": [
+      "2510.22899",
+      "score-anisotropy",
+      "On the Anisotropy of Score-Based Generative Models"
+    ],
+    "matching_result_count_per_kind_and_query": 0
+  },
+  "interpretation": "No public checkpoint or raw five-seed result artifact was located. Absence is a capability blocker, not evidence for or against Claim 5."
+}

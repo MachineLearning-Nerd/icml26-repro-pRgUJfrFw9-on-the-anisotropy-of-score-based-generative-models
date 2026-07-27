@@ -1,0 +1,21 @@
+{
+  "backend": "hf",
+  "flavor": "cpu-upgrade",
+  "estimated_required_cores": 4,
+  "actual_cpu": {
+    "affinity_cpus": 64,
+    "gpu_used": false,
+    "logical_cpus": 64,
+    "physical_cpus": 32,
+    "platform": "Linux-6.12.90-120.164.amzn2023.x86_64-x86_64-with-glibc2.36",
+    "torch_interop_threads": 32,
+    "torch_intraop_threads": 4
+  },
+  "gpu_used": false,
+  "claim_verifier_runtime_seconds": 103.89100419299211,
+  "checker_wrapper_runtime_seconds": 114.45754768094048,
+  "campaign_runtime_seconds": 146.94261655199807,
+  "peak_rss_megabytes": 15567.0,
+  "run_id": "8948914c-470d-4c41-9b56-44243d6545d8",
+  "git_commit": "6a9a52a024df44a8757c8345961f557fb798d6d9"
+}

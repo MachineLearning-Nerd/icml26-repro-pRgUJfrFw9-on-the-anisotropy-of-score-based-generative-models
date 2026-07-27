@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "exactly_four_routes": true,
+    "first_three_route_names_distinct": true,
+    "honest_blocked_verdict": true,
+    "negative_control_rejected": true,
+    "no_gpu": true,
+    "no_invalid_falsification": true,
+    "route_1_attempted_all_datasets": true,
+    "route_1_projection_math": true,
+    "route_2_no_checkpoint_not_science": true,
+    "route_3_recomputed": true,
+    "route_4_dedicated_falsification": true
+  },
+  "implementation": "independent route-label, arithmetic, verdict, and control audit; no primary-verifier imports",
+  "passed": true,
+  "recomputed_figure_9": {
+    "CIFAR-10": {
+      "I_minus_W_min": 0.8,
+      "minimum_better": true,
+      "relative_reduction_vs_I": 0.5369127516778524
+    },
+    "CelebA-HQ": {
+      "I_minus_W_min": 0.9099999999999999,
+      "minimum_better": true,
+      "relative_reduction_vs_I": 0.771186440677966
+    },
+    "MNIST": {
+      "I_minus_W_min": 1.7999999999999998,
+      "minimum_better": true,
+      "relative_reduction_vs_I": 0.9424083769633508
+    }
+  }
+}
