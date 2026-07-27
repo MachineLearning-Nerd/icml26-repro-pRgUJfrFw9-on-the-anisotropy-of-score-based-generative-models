@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "disjoint_seed_ranges": true,
+    "exact_network_count": true,
+    "matrix_reconstructed": true,
+    "matrix_symmetric": true,
+    "negative_control_rejected": true,
+    "no_gpu": true,
+    "orthonormal": true,
+    "positive_semidefinite": true,
+    "selected_eigenvalues_match": true,
+    "source_network_counts": true,
+    "structural_pass": true
+  },
+  "eigenvalue_max_abs_error": 0.0,
+  "implementation": "independent shard decode, equal-weight matrix reconstruction, and NumPy eigensolver; no primary-verifier imports",
+  "lambda_max": 134.91416619311377,
+  "lambda_min": 0.09433513949682487,
+  "passed": true
+}

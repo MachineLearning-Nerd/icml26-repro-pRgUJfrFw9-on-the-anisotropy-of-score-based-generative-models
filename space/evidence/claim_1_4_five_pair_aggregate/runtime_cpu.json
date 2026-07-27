@@ -1,0 +1,18 @@
+{
+  "run_id": "0c6c3210-941e-443c-ab16-dd524c804ac9",
+  "git_sha": "26b31ae7f0bb19c7901c72f54413326ecd729d9e",
+  "estimated_required_cores": 1,
+  "estimated_aggregate_runtime_seconds": 5,
+  "selected_backend": "hf",
+  "selected_flavor": "cpu-upgrade",
+  "image": "ghcr.io/astral-sh/uv:python3.12-bookworm-slim",
+  "logical_cpus": 64,
+  "physical_cpus": 32,
+  "affinity_cpus": 64,
+  "gpu_used": false,
+  "aggregate_verifier_runtime_seconds": 0.1037127539748326,
+  "campaign_runtime_seconds": 16.540457745082676,
+  "orx_run_duration_seconds": 42,
+  "cost_usd": null,
+  "cost_note": "The HF job record exposed duration and flavor but no authoritative billed cost."
+}

@@ -1,0 +1,8 @@
+{
+  "name": "reverse endpoint labels",
+  "expected_to_fail": true,
+  "accepted_under_positive_effect_rule": false,
+  "rejected": true,
+  "sw2_mean": -3.8876298653973436,
+  "msw2_mean": -18.907078830476827
+}

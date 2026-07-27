@@ -1,3 +1,41 @@
+# OpenResearch reproduction
+
+This campaign tests the paper's central SAD-generation claim with the author
+`D=256` iDDPM configuration on CPU. The paper reports that generation quality
+degrades toward large-eigenvalue SADs. Across five exact paired endpoint runs,
+we observe a mean largest-minus-smallest SW2 gap of `+3.887630` (exact paired
+bootstrap 95% interval `[2.742088, 5.279937]`) and an MSW2 gap of `+18.907079`
+(`[15.828264, 22.082122]`); lower is better.
+
+**Assessment:** paper-scale endpoint corroboration, but Claims 1 and 4 remain
+BLOCKED rather than verified. The one-million-network geometry audit found
+that only the leading individual SAD is stable across independent shards, so
+the paper's full multi-direction rank trend cannot be tested without assigning
+meaning to unstable eigenvector rotations. Claims 2, 3, and 6 are VERIFIED;
+Claim 5 is BLOCKED after four distinct routes.
+
+The faithful endpoint setup uses 10,000 training samples, 2,000 optimizer
+updates, 10,000 generated samples, 1,000 reverse steps, five paired seeds, and
+16,384 projections. The only substitution is scope: extreme endpoints are
+tested, while the unstable interior-direction sweep is not run. Compute is
+Hugging Face `cpu-upgrade`, CPU only, with four PyTorch intra-op threads for
+generation and no GPU.
+
+[Read the illustrated technical report](reports/anisotropy-paper-scale/report.md) ·
+[Open the tutorial notebook](notebooks/anisotropy_reproduction.py) ·
+[![Open in molab](https://marimo.io/molab-shield.svg)](https://molab.marimo.io/github/MachineLearning-Nerd/icml26-repro-pRgUJfrFw9-on-the-anisotropy-of-score-based-generative-models/blob/main/notebooks/anisotropy_reproduction.py)
+
+## Experiment log
+
+| Branch / experiment | Purpose or change | Exact run command | Assessment / outcome | Compute |
+| --- | --- | --- | --- | --- |
+| `main` | Publication surface | Not run as an experiment (publication surface) | README, report, notebook, and evaluator pages | none |
+| [`orx/claims-1-and-4-one-million-geometry-aggregate`](https://github.com/MachineLearning-Nerd/icml26-repro-pRgUJfrFw9-on-the-anisotropy-of-score-based-generative-models/tree/orx/claims-1-and-4-one-million-geometry-aggregate) | Combine two independent 500k geometry shards | `uv sync --locked && .venv/bin/python repro/run_campaign.py` | one-million eigensystem passes; only index 0 individually stable | HF `cpu-upgrade`, 32 physical CPUs, 1m51s |
+| [paper-scale endpoint branches](https://github.com/MachineLearning-Nerd/icml26-repro-pRgUJfrFw9-on-the-anisotropy-of-score-based-generative-models/branches) | Train and generate largest/smallest SAD pairs for seeds 0–4 | `uv sync --locked && .venv/bin/python repro/run_campaign.py` | all five paired SW2 and MSW2 gaps positive | HF `cpu-upgrade`, torch 4 threads, 2h27m–4h13m each |
+| [`orx/claims-1-and-4-one-million-five-pair-aggregate`](https://github.com/MachineLearning-Nerd/icml26-repro-pRgUJfrFw9-on-the-anisotropy-of-score-based-generative-models/tree/orx/claims-1-and-4-one-million-five-pair-aggregate) | Exact paired aggregation and reversed-label control | `uv sync --locked && .venv/bin/python repro/run_campaign.py` | intervals exclude zero; Claims 1/4 remain BLOCKED on rank association | HF `cpu-upgrade`, 32 physical CPUs, 42s |
+
+---
+
 # [On the Anisotropy of Score-Based Generative Models](https://arxiv.org/abs/2510.22899)
 Andreas Floros, Seyed-Mohsen Moosavi-Dezfooli, Pier Luigi Dragotti
 

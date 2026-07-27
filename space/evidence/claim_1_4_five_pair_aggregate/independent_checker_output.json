@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "all_run_ids_unique": true,
+    "endpoint_flags_pass": true,
+    "geometry_checker_passed": true,
+    "leading_direction_stable": true,
+    "msw2_differences_exact": true,
+    "msw2_interval_match": true,
+    "msw2_interval_positive": true,
+    "msw2_mean_match": true,
+    "paper_scale_geometry": true,
+    "reverse_label_control_rejected": true,
+    "scoped_status_honest": true,
+    "smallest_instability_disclosed": true,
+    "sw2_differences_exact": true,
+    "sw2_interval_match": true,
+    "sw2_interval_positive": true,
+    "sw2_mean_match": true
+  },
+  "implementation": "independent input parse and exhaustive stdlib bootstrap; no primary-verifier imports",
+  "passed": true,
+  "recomputed": {
+    "msw2": {
+      "differences": [
+        19.183560007281415,
+        13.691540406317294,
+        24.375159079083495,
+        16.52711137478938,
+        20.75802328491255
+      ],
+      "interval": [
+        15.828264140870534,
+        22.082122379390484
+      ],
+      "mean": 18.907078830476827
+    },
+    "sw2": {
+      "differences": [
+        2.523301275184064,
+        2.69050719535384,
+        6.424866323309012,
+        3.2828236837755913,
+        4.516650849364211
+      ],
+      "interval": [
+        2.7420881249702798,
+        5.279937038942132
+      ],
+      "mean": 3.8876298653973436
+    }
+  }
+}

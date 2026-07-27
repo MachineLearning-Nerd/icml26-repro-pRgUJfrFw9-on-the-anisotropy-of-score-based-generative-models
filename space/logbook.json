@@ -8,12 +8,18 @@
     "icml2026-repro",
     "paper-pRgUJfrFw9"
   ],
-  "updated_at": "2026-07-26T00:00:00+00:00",
+  "updated_at": "2026-07-27T00:00:00+00:00",
   "root": {
     "slug": "index",
     "title": "Current claim-by-claim verification",
     "file": "pages/index.md",
     "children": [
+      {
+        "slug": "current-claims-1-4",
+        "title": "Current Claims 1 and 4 — BLOCKED",
+        "file": "pages/current/claims-1-4/page.md",
+        "children": []
+      },
       {
         "slug": "current-claim-2",
         "title": "Current Claim 2 — VERIFIED",
@@ -39,6 +45,18 @@
         "children": []
       },
       {
+        "slug": "current-verification-run",
+        "title": "Current cumulative verification",
+        "file": "pages/verification-run/page.md",
+        "children": []
+      },
+      {
+        "slug": "evidence-matrix",
+        "title": "Evaluator-visible evidence matrix",
+        "file": "pages/evidence/page.md",
+        "children": []
+      },
+      {
         "slug": "historical-rejected-baseline",
         "title": "Historical rejected baseline",
         "file": "pages/historical-rejected-baseline/page.md",
@@ -47,5 +65,5 @@
     ]
   },
   "agent_view_tokens": 10400,
-  "revision": "claim5-blocked-candidate"
+  "revision": "paper-scale-claims-1-4-release-candidate"
 }

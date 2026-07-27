@@ -1,0 +1,201 @@
+{
+  "claim_verdict": "BLOCKED_PENDING_MULTI_DIRECTION_RANK_ASSOCIATION",
+  "claims": [
+    1,
+    4
+  ],
+  "input_checks": {
+    "complete_pairs": true,
+    "endpoint_checkers_passed": true,
+    "five_seed_indices": true,
+    "geometry_aggregate_checker_passed": true,
+    "leading_direction_stable": true,
+    "metrics_finite": true,
+    "paired_seed_ids_match": true,
+    "paper_scale_geometry": true,
+    "smallest_direction_instability_disclosed": true,
+    "ten_endpoints": true,
+    "unique_run_ids": true
+  },
+  "negative_control": {
+    "accepted_under_positive_effect_rule": false,
+    "expected_to_fail": true,
+    "msw2_mean": -18.907078830476827,
+    "name": "reverse endpoint labels",
+    "rejected": true,
+    "sw2_mean": -3.8876298653973436
+  },
+  "paired_analysis": {
+    "accepted": true,
+    "msw2": {
+      "accepted": true,
+      "all_observed_positive": true,
+      "exhaustive_bootstrap_resamples": 3125,
+      "mean": 18.907078830476827,
+      "paired_differences": [
+        19.183560007281415,
+        13.691540406317294,
+        24.375159079083495,
+        16.52711137478938,
+        20.75802328491255
+      ],
+      "percentile_95_interval": [
+        15.828264140870534,
+        22.082122379390484
+      ],
+      "sample_sd": 4.070271027946169
+    },
+    "sw2": {
+      "accepted": true,
+      "all_observed_positive": true,
+      "exhaustive_bootstrap_resamples": 3125,
+      "mean": 3.8876298653973436,
+      "paired_differences": [
+        2.523301275184064,
+        2.69050719535384,
+        6.424866323309012,
+        3.2828236837755913,
+        4.516650849364211
+      ],
+      "percentile_95_interval": [
+        2.7420881249702798,
+        5.279937038942132
+      ],
+      "sample_sd": 1.6196853049404476
+    }
+  },
+  "passed": true,
+  "runtime_seconds": 0.005433707992779091,
+  "scientific_status": "PAPER_SCALE_FIVE_PAIR_ENDPOINT_CORROBORATION",
+  "source_endpoints": [
+    {
+      "commit": "704eb01",
+      "endpoint": "largest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 54.83966108332887,
+      "paired_seed": 510000,
+      "run_id": "cba66c9e-6aa8-4e6b-9501-41c751e7f30b",
+      "seed_index": 0,
+      "sw2": 12.341826511429662
+    },
+    {
+      "commit": "a8e50e2",
+      "endpoint": "smallest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 35.656101076047456,
+      "paired_seed": 510000,
+      "run_id": "cd6eed98-f935-4e04-9daa-eb857b14eb55",
+      "seed_index": 0,
+      "sw2": 9.818525236245598
+    },
+    {
+      "commit": "2276e33",
+      "endpoint": "largest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 43.44230666975526,
+      "paired_seed": 510100,
+      "run_id": "f1d8afea-6434-44f6-8ab9-cf80dae2e26a",
+      "seed_index": 1,
+      "sw2": 11.568895662361294
+    },
+    {
+      "commit": "9c72b69",
+      "endpoint": "smallest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 29.750766263437967,
+      "paired_seed": 510100,
+      "run_id": "0f159d16-70c8-4cd7-aedb-2375e8c474ae",
+      "seed_index": 1,
+      "sw2": 8.878388467007454
+    },
+    {
+      "commit": "e178aa7",
+      "endpoint": "largest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 43.40047742167922,
+      "paired_seed": 510200,
+      "run_id": "0727ce00-94dc-4048-8965-9dcfb98c6d49",
+      "seed_index": 2,
+      "sw2": 11.349945893245224
+    },
+    {
+      "commit": "8481740",
+      "endpoint": "smallest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 19.025318342595725,
+      "paired_seed": 510200,
+      "run_id": "ddb2f1de-6b5a-4449-99b1-56bb167f0407",
+      "seed_index": 2,
+      "sw2": 4.925079569936211
+    },
+    {
+      "commit": "16f01b3",
+      "endpoint": "largest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 44.98406836036509,
+      "paired_seed": 510300,
+      "run_id": "fedab5dc-9171-4de6-8db5-d825c1c368dd",
+      "seed_index": 3,
+      "sw2": 11.61938670372604
+    },
+    {
+      "commit": "84c71ad",
+      "endpoint": "smallest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 28.45695698557571,
+      "paired_seed": 510300,
+      "run_id": "70dd7dad-03ee-48b9-be32-af7ae5dc11be",
+      "seed_index": 3,
+      "sw2": 8.336563019950448
+    },
+    {
+      "commit": "708b6d7",
+      "endpoint": "largest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 42.12825701429505,
+      "paired_seed": 510400,
+      "run_id": "e483f540-bf8b-4e0b-a306-9f15816fcc94",
+      "seed_index": 4,
+      "sw2": 10.211508390514693
+    },
+    {
+      "commit": "e39a7fc",
+      "endpoint": "smallest",
+      "exact_setup_passed": true,
+      "independent_checker_passed": true,
+      "msw2": 21.3702337293825,
+      "paired_seed": 510400,
+      "run_id": "d11e5351-aa1b-4cb4-aab5-3e7b16e3ca4c",
+      "seed_index": 4,
+      "sw2": 5.694857541150482
+    }
+  ],
+  "source_geometry": {
+    "aggregate_checker_passed": true,
+    "aggregate_commit": "b939c5b",
+    "aggregate_run_id": "3d7901fe-d3e0-4f41-b8a8-ebd077bc5da5",
+    "largest_eigenvalue": 134.9141661931137,
+    "limitation": "The leading individual direction passes the preregistered cross-shard stability gate; the smallest full-estimator direction is deterministic but does not.",
+    "network_count": 1000000,
+    "selected_direction_stability": {
+      "0": {
+        "absolute_vector_overlap": 0.9976952438160434,
+        "individual_direction_ready": true
+      },
+      "255": {
+        "absolute_vector_overlap": 0.1993975461110904,
+        "individual_direction_ready": false
+      }
+    },
+    "smallest_eigenvalue": 0.09433513949682383
+  }
+}

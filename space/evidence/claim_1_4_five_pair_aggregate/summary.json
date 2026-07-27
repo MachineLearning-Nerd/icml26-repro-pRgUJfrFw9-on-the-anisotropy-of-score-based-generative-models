@@ -1,0 +1,18 @@
+{
+  "all_ten_endpoint_checks_passed": true,
+  "independent_checker_passed": true,
+  "msw2_interval": [
+    15.828264140870534,
+    22.082122379390484
+  ],
+  "msw2_mean_difference": 18.907078830476827,
+  "negative_control_rejected": true,
+  "pairs": 5,
+  "status": "PAPER_SCALE_FIVE_PAIR_ENDPOINT_CORROBORATION",
+  "sw2_interval": [
+    2.7420881249702798,
+    5.279937038942132
+  ],
+  "sw2_mean_difference": 3.8876298653973436,
+  "verdict": "BLOCKED_PENDING_MULTI_DIRECTION_RANK_ASSOCIATION"
+}

@@ -1,0 +1,30 @@
+{
+  "all_passed": true,
+  "run_id": "0c6c3210-941e-443c-ab16-dd524c804ac9",
+  "git_sha": "26b31ae7f0bb19c7901c72f54413326ecd729d9e",
+  "runtime_seconds": 16.540457745082676,
+  "cpu": {
+    "logical_cpus": 64,
+    "physical_cpus": 32,
+    "affinity_cpus": 64,
+    "gpu_used": false
+  },
+  "checkers": [
+    {"checker": "repro/src/verify_sad.py", "exit_code": 0},
+    {"checker": "repro/claims/claim_1_4_geometry_million_aggregate/verify.py", "exit_code": 0},
+    {"checker": "repro/claims/claim_1_4_five_pair_aggregate/verify.py", "exit_code": 0},
+    {"checker": "repro/claims/claim_2/verify.py", "exit_code": 0},
+    {"checker": "repro/claims/claim_3/verify.py", "exit_code": 0},
+    {"checker": "repro/claims/claim_6/verify.py", "exit_code": 0}
+  ],
+  "environment_only_failed_attempts": [
+    {
+      "run_id": "b43111b6-85bb-4d8f-85c7-6cd09b6e70fb",
+      "reason": "uv absent; no verifier executed"
+    },
+    {
+      "run_id": "a295c532-ad3e-4c3a-b367-8d31ce5de943",
+      "reason": "uv absent; no verifier executed"
+    }
+  ]
+}
