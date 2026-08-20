@@ -1,5 +1,30 @@
 # OpenResearch reproduction
 
+## Collection classification and audit boundary
+
+This repository is a **legacy/source workspace** for *On the Anisotropy of Score-Based Generative Models*
+(arXiv `2510.22899`, OpenReview `pRgUJfrFw9`). It is preserved
+separately from the standardized canonical record at
+[`icml26-score-anisotropy`](https://github.com/MachineLearning-Nerd/icml26-score-anisotropy).
+
+The claim results and scores recorded below are historical results of this
+workspace. They are not new paper-level verifications performed while
+organizing the collection. The collection audit did not run the scientific
+implementation; the canonical record documents its own scoped status and
+limitations.
+
+### How the historical claim evidence is produced
+
+The claim table and experiment log below are the authoritative mapping from
+each paper claim to its producer, command, control, and evidence artifact. In
+this workspace, the campaign runners generate the finite SAD geometry and endpoint diagnostics, then persist raw tables, figures, and the report surfaces named in the experiment log.
+
+The former `orx/*` branches are historical workstreams, not additional final
+publication claims. Their purposes and tips are preserved in
+[`BRANCH_AUDIT.md`](BRANCH_AUDIT.md). Citation and author acknowledgment
+details are in [`CITATION.cff`](CITATION.cff) and
+[`AUTHOR_THANK_YOU.md`](AUTHOR_THANK_YOU.md).
+
 This campaign tests the paper's central SAD-generation claim with the author
 `D=256` iDDPM configuration on CPU. The paper reports that generation quality
 degrades toward large-eigenvalue SADs. Across five exact paired endpoint runs,

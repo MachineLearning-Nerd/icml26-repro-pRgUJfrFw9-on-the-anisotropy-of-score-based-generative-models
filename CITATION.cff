@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "Legacy/source workspace for On the Anisotropy of Score-Based Generative Models"
+type: software
+authors:
+  - family-names: Floros
+    given-names: Andreas
+  - family-names: Moosavi-Dezfooli
+    given-names: Seyed-Mohsen
+  - family-names: Dragotti
+    given-names: Pier Luigi
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-legacy-score-anisotropy"
+url: "https://github.com/MachineLearning-Nerd/icml26-legacy-score-anisotropy"
+abstract: "Legacy/source workspace preserving the implementation, evidence artifacts, and branch history for the associated ICML 2026 reproduction record."
+keywords:
+  - reproduction
+  - ICML 2026
+references:
+  - type: article
+    title: "On the Anisotropy of Score-Based Generative Models"
+    authors:
+      - family-names: Floros
+        given-names: Andreas
+      - family-names: Moosavi-Dezfooli
+        given-names: Seyed-Mohsen
+      - family-names: Dragotti
+        given-names: Pier Luigi
+    identifiers:
+      - type: arxiv
+        value: "2510.22899"
+    url: "https://arxiv.org/abs/2510.22899"
+
