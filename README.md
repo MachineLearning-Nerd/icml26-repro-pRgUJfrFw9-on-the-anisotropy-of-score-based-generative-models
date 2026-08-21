@@ -25,6 +25,10 @@ publication claims. Their purposes and tips are preserved in
 details are in [`CITATION.cff`](CITATION.cff) and
 [`AUTHOR_THANK_YOU.md`](AUTHOR_THANK_YOU.md).
 
+## Thank you
+
+Thank you to the paper authors for making this research available for study. The full acknowledgment is in [`AUTHOR_THANK_YOU.md`](AUTHOR_THANK_YOU.md).
+
 This campaign tests the paper's central SAD-generation claim with the author
 `D=256` iDDPM configuration on CPU. The paper reports that generation quality
 degrades toward large-eigenvalue SADs. Across five exact paired endpoint runs,
